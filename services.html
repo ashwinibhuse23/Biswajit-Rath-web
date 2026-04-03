@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Biswajit Rath | Humanizing AI & Transforming Enterprises</title>
+
+  <!-- Meta SEO -->
+  <meta name="description"
+    content="Portfolio of Dr. Biswajit Rath - 25+ years leading AI-first digital transformation.">
+
+  <!-- Fonts: Big Shoulders Display (Headings) & Kanit (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800&family=Kanit:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg" data-aos="fade-down">
+    <div class="container-fluid px-lg-5">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="fa fa-bars text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center gap-4">
+          <li class="nav-item"><a class="nav-link active btnpress" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link btnpress" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link btnpress" href="publications.html">Books & Publications</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle btnpress" href="#" id="servicesDropdown">
+              Services
+            </a>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#board">
+                  Board & Advisory Roles
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#Ai">
+                  AI Strategy & Transformation Advisor
+                </a>
+              </li>
+
+               <li>
+                <a class="dropdown-item" href="#coaching">
+                 Executive Coaching & Mentoring
+                </a>
+              </li>
+
+               <li>
+                <a class="dropdown-item" href="#academic">
+                 Academic & Institutional Engagements
+                </a>
+              </li>
+
+               <li>
+                <a class="dropdown-item" href="#workshops">
+                 Speaking Engagements & Workshops
+                </a>
+              </li>
+
+               <li>
+                <a class="dropdown-item" href="#startup">
+                  Startup Mentorship
+                </a>
+              </li>
+            </ul>
+          </li>
+        
+          <li class="nav-item"><a class="nav-link btnpress" href="media.html">Media & Recognition</a></li>
+          <li class="nav-item"><a class="nav-link btnpress" href="thought.html">Thought Leadership</a></li>
+          <li class="nav-item ms-lg-3">
+            <a href="contact.html" class="btn btn-contact btnpress">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <script>
+document.querySelectorAll('.dropdown-item').forEach(item => {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
+
+    if (target) {
+      // Smooth scroll
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+
+      // Highlight effect
+      target.classList.add('active-service');
+
+      // Remove after animation
+      setTimeout(() => {
+        target.classList.remove('active-service');
+      }, 2000);
+    }
+  });
+});
+</script>
+
+  <!-- HERO STYLE SERVICES HEADER -->
+  <div class="services-hero text-center">
+
+    <div class="hero-badge">
+      AI STRATEGIST · ADVISOR · THOUGHT LEADER
+    </div>
+
+    <h1 class="services-title">
+      Work With <span class="gradient-text">Dr. Biswajit Rath</span>
+    </h1>
+
+    <p class="services-subtext">
+      Dr. Rath collaborates with organizations, institutions, and leaders at the intersection of AI, human-centered
+      design, and strategic transformation. His engagements are selective, impact-driven, and focused on long-term value
+      creation.
+    </p>
+
+    <a href="#services" class="btn btn-primary hero-btn">
+      Explore Services
+    </a>
+
+  </div>
+
+  <script>
+    // CURSOR GLOW
+    const glow = document.querySelector('.cursor-glow');
+
+    document.addEventListener('mousemove', (e) => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    // SCROLL REVEAL
+    const reveals = document.querySelectorAll('.reveal-text');
+
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight * 0.85;
+
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+
+        if (top < trigger) {
+          el.classList.add('active');
+        }
+      });
+    });
+
+    // MAGNETIC EFFECT
+    const cards = document.querySelectorAll('.service-inner');
+
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        card.style.transform = `scale(1.03) translate(${x * 0.05}px, ${y * 0.05}px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+      });
+    });
+  </script>
+
+
+
+
+
+
+  <section class="services-grid-section" id="services">
+
+    <div class="container">
+
+      <!-- Heading -->
+      <div class="services-heading text-center">
+        <span class="section-tag">WHAT I OFFER</span>
+        <h2>
+          Services & <span>Engagements</span>
+        </h2>
+      </div>
+
+      <!-- Grid -->
+      <div class="services-grid">
+
+        <!-- CARD 1 -->
+        <div class="service-card-modern" id="board">
+          <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Board & Advisory Roles</h3>
+          <p>
+            Dr. Rath serves as a trusted advisor and board member to organizations navigating complexity, digital
+            transformation, and AI adoption.
+          </p>
+          <button class="learn-more-btn" data-title="Board & Advisory Roles"
+            data-desc="Dr. Rath serves as a trusted advisor and board member to organizations navigating complexity, digital transformation, and AI adoption."
+            data-subtitle="Engagements include:"
+            data-points="Board Member (Corporate / Institutional) |	Strategic Advisor to Startups & Growth-stage Companies |Advisory on AI Strategy & Responsible AI Adoption |	Governance, Ethics & Long-term Technology Vision ">
+            Learn more
+          </button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="service-card-modern" id="Ai">
+          <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+          <h3>AI Strategy & Transformation Advisory</h3>
+          <p>
+            Helping organizations define the right problems before building solutions, ensuring AI initiatives are
+            meaningful, scalable, and aligned to business outcomes.
+          </p>
+          <button class="learn-more-btn" data-title="AI Strategy & Transformation Advisory"
+            data-desc="Helping organizations define the right problems before building solutions, ensuring AI initiatives are meaningful, scalable, and aligned to business outcomes."
+            data-subtitle="FOCUS AREAS"
+            data-points="Problem Definition & Use Case Identification |AI Roadmap & Transformation Strategy |Human-Centered AI Design | Data-to-Decision Frameworks|Adoption & Change Enablement ">
+            Learn more
+          </button>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="service-card-modern" id="coaching">
+          <div class="icon-box"><i class="fa-solid fa-user-group"></i></div>
+          <h3>Executive Coaching & Mentoring</h3>
+          <p>
+            Dr. Rath works closely with senior leaders and professionals transitioning into AI-led roles, helping them
+            build clarity, confidence, and capability.
+          </p>
+          <button class="learn-more-btn" data-title="Executive Coaching & Mentoring"
+            data-desc="Dr. Rath works closely with senior leaders and professionals transitioning into AI-led roles, helping them build clarity, confidence, and capability."
+            data-subtitle="Who it’s for:"
+            data-points="CXOs & Senior Leaders|Mid-career Professionals transitioning to AI|High-potential talent"
+            data-subtitle2="Key Themes:"
+            data-points2="AI Mindset & Leadership|Decision-making in uncertain environments|Bridging business and technology">
+
+            Learn more →
+          </button>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="service-card-modern" id="academic">
+          <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Academic & Institutional Engagements</h3>
+          <p>
+            Active collaborations with leading institutions to shape future-ready talent and thought leadership in AI
+            and systems thinking.
+          </p>
+          <button class="learn-more-btn" data-title="Academic & Institutional Engagements"
+            data-desc="Active collaborations with leading institutions to shape future-ready talent and thought leadership in AI and systems thinking."
+            data-subtitle="Engagement formats:"
+            data-points="Guest Lectures & Masterclasses |Curriculum Advisory |Workshops & Faculty Sessions|Institutional Board / Advisory Roles  ">
+            Learn more
+          </button>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="service-card-modern" id="workshops">
+          <div class="icon-box"><i class="fa-solid fa-microphone"></i></div>
+          <h3>Speaking Engagements & Workshops</h3>
+          <p>
+            Dr. Rath delivers keynote talks and interactive workshops that challenge conventional thinking and inspire
+            action.
+          </p>
+          <button class="learn-more-btn" data-title="Speaking Engagements & Workshops"
+            data-desc="Dr. Rath delivers keynote talks and interactive workshops that challenge conventional thinking and inspire action."
+            data-subtitle="Popular topics:"
+            data-points="Humanising AI: Beyond Technology |Problem Definition in the Age of AI |AI Adoption: From Hype to Reality |Systems Thinking for Leaders ">
+            Learn more
+          </button>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="service-card-modern" id="startup">
+          <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Startup Mentorship</h3>
+          <p>
+            Working with founders to refine problem statements, align product-market fit, and build sustainable,
+            scalable ventures.
+          </p>
+          <button class="learn-more-btn" data-title="Startup Mentorship"
+            data-desc="Working with founders to refine problem statements, align product-market fit, and build sustainable, scalable ventures."
+            data-subtitle="Support includes:"
+            data-points="Idea Validation & Problem Framing |Product & AI Strategy |Go-to-market thinking |Leadership guidance ">
+            Learn more
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICE MODAL -->
+  <div class="service-modal" id="serviceModal">
+    <div class="modal-content-box">
+
+      <button class="modal-close">&times;</button>
+
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+
+      <h6 class="modal-subtitle" id="modalSubtitle"></h6>
+      <ul id="modalList"></ul>
+
+      <h6 class="modal-subtitle" id="modalSubtitle2"></h6>
+      <ul id="modalList2"></ul>
+
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+    const card = document.querySelectorAll('.service-card-modern');
+
+    card.forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        card.style.transform = `translateY(-10px) rotateX(${y * -0.02}deg) rotateY(${x * 0.02}deg)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const modal = document.getElementById('serviceModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDesc = document.getElementById('modalDesc');
+      const modalSubtitle = document.getElementById('modalSubtitle');
+      const modalList = document.getElementById('modalList');
+
+      const modalSubtitle2 = document.getElementById('modalSubtitle2');
+      const modalList2 = document.getElementById('modalList2');
+
+      const buttons = document.querySelectorAll('.learn-more-btn');
+      const closeBtn = document.querySelector('.modal-close');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          console.log("clicked");
+          e.preventDefault();
+
+          modalTitle.textContent = btn.dataset.title || "";
+          modalDesc.textContent = btn.dataset.desc || "";
+          modalSubtitle.textContent = btn.dataset.subtitle || "";
+
+          modalList.innerHTML = "";
+
+          const points = btn.dataset.points ? btn.dataset.points.split('|') : [];
+
+          points.forEach(point => {
+            const li = document.createElement('li');
+            li.textContent = point;
+            modalList.appendChild(li);
+          });
+
+
+          if (btn.dataset.subtitle2 && btn.dataset.points2) {
+
+            modalSubtitle2.style.display = "block";
+            modalList2.style.display = "block";
+
+            modalSubtitle2.textContent = btn.dataset.subtitle2;
+            modalList2.innerHTML = "";
+
+            const points2 = btn.dataset.points2.split('|');
+
+            points2.forEach(point => {
+              const li = document.createElement('li');
+              li.textContent = point.trim();
+              modalList2.appendChild(li);
+            });
+
+          } else {
+            modalSubtitle2.style.display = "none";
+            modalList2.style.display = "none";
+          }
+
+          modal.classList.add('active');
+        });
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+
+    });</script>
+
+
+
+
+
+
+
+
+  <section class="cta-futuristic">
+    <div class="container">
+
+      <div class="cta-glass">
+
+        <div class="cta-left">
+          <span class="cta-tag">Let’s Collaborate</span>
+
+          <h2>
+            Build the Future <br>
+            <span>with Human-Centered AI</span>
+          </h2>
+
+          <p>
+            Partner with Dr. Rath to design intelligent systems that are not just
+            powerful, but meaningful, ethical, and scalable.
+          </p>
+        </div>
+
+        <div class="cta-right">
+          <a href="#contact" class="cta-btn-futuristic">
+            Connect Now
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer id="footer" class="py-3 bg-darker text-white">
+    <div class="container">
+      <div class="row border-top border-secondary border-opacity-10">
+        <div class="col-12 text-center small">
+          Designed by <a class="company-name" href="https://probusstudio.com/">Probus Studio</a>. </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- GSAP Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".service-block").forEach((block) => {
+      gsap.fromTo(block.querySelectorAll(".service-content > *"),
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.1,
+          duration: 0.6,
+          scrollTrigger: {
+            trigger: block,
+            start: "top 85%",
+          }
+        }
+      );
+    });
+  </script>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+
+  <!-- Vanilla Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.js"
+    integrity="sha512-0eckjEcIDNlyXFNRAL2Kecw71G5Df+nI2kazjvQrH/DZEHYOdy0UnP0gAlQGZMq4ZOOHpc2eYG15N3JZDA6pGg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Typewriter Effect -->
+  <script>
+    const words = ["Humanizing AI ", "Transforming Enterprises ", "Shaping Future Leaders"];
+    let x = 0;
+    let y = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const typeSpeed = 100;
+    const deleteSpeed = 50;
+    const waitTime = 2000; // Time the word stays visible
+
+    function type() {
+      currentWord = words[x];
+
+      if (isDeleting) {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, y - 1);
+        y--;
+        if (y == 0) {
+          isDeleting = false;
+          x = (x + 1) % words.length;
+        }
+      } else {
+        document.getElementById("typewriter").textContent = currentWord.substring(0, y + 1);
+        y++;
+        if (y == currentWord.length) {
+          isDeleting = true;
+          setTimeout(type, waitTime);
+          return;
+        }
+      }
+
+      setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
+    }
+
+    // Start the typing effect
+    document.addEventListener('DOMContentLoaded', type);
+  </script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+  <!--ThreeJS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+  <script src="js/book.js"></script>
+
+</body>
+
+</html>
