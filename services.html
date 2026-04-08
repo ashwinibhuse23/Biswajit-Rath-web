@@ -128,6 +128,12 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
 </script>
 
   <!-- HERO STYLE SERVICES HEADER -->
+  <section class="services-hero-wrapper">
+
+    <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video/services page video.mp4" type="video/mp4">
+  </video>
+
   <div class="services-hero text-center">
 
     <div class="hero-badge">
@@ -139,9 +145,7 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     </h1>
 
     <p class="services-subtext">
-      Dr. Rath collaborates with organizations, institutions, and leaders at the intersection of AI, human-centered
-      design, and strategic transformation. His engagements are selective, impact-driven, and focused on long-term value
-      creation.
+      Dr. Rath collaborates with organizations, institutions, and leaders...
     </p>
 
     <a href="#services" class="btn btn-primary hero-btn">
@@ -149,6 +153,8 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
     </a>
 
   </div>
+
+</section>
 
   <script>
     // CURSOR GLOW
@@ -434,39 +440,89 @@ document.querySelectorAll('.dropdown-item').forEach(item => {
 
 
 
-  <section class="cta-futuristic">
-    <div class="container">
+ <section class="cta-section">
+  <div class="cta-wrapper">
 
-      <div class="cta-glass">
+    <h2>Collaborate with Dr. Rath</h2>
 
-        <div class="cta-left">
-          <span class="cta-tag">Let’s Collaborate</span>
+    <p>
+      If you’re looking to build meaningful, human-centered AI solutions or shape the future of your organization:
+    </p>
 
-          <h2>
-            Build the Future <br>
-            <span>with Human-Centered AI</span>
-          </h2>
+    <button class="cta-btn" id="openForm">Connect Now</button>
 
-          <p>
-            Partner with Dr. Rath to design intelligent systems that are not just
-            powerful, but meaningful, ethical, and scalable.
-          </p>
-        </div>
+  </div>
+</section>
 
-        <div class="cta-right">
-          <a href="#contact" class="cta-btn-futuristic">
-            Connect Now
-          </a>
-        </div>
+<!-- 🔥 POPUP FORM -->
+<div class="form-modal" id="formModal">
+  <div class="form-container">
 
-      </div>
+    <span class="close-btn" id="closeForm">&times;</span>
 
-    </div>
-  </section>
+    <h3>Let's Collaborate</h3>
+
+    <form id="collabForm">
+
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Contact Number" required>
+      <input type="text" placeholder="Organization / Institution">
+
+      <select required>
+        <option value="">Type of Collaboration</option>
+        <option>Board & Advisory Roles</option>
+        <option>AI Strategy & Transformation Advisory</option>
+        <option>Executive Coaching & Mentoring</option>
+        <option>Academic & Institutional Engagements</option>
+        <option>Speaking Engagements & Workshops</option>
+        <option>Startup Mentorship</option>
+        <option>Other</option>
+      </select>
+
+      <textarea placeholder="Tell us what you're looking to collaborate on" rows="4"></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+  </div>
+</div>
 
 
+<script>
+  const openBtn = document.getElementById("openForm");
+const closeBtn = document.getElementById("closeForm");
+const modal = document.getElementById("formModal");
 
+// Open
+openBtn.addEventListener("click", () => {
+  modal.classList.add("active");
+});
 
+// Close button
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+// Close on outside click
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+</script>
+
+<script>const cta = document.querySelector('.cta-wrapper');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      cta.style.animation = "ctaFadeUp 1s ease forwards";
+    }
+  });
+});
+
+observer.observe(cta);</script>
 
 
 

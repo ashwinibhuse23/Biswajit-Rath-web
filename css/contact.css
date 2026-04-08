@@ -166,32 +166,45 @@ section {
    CONTACT HERO (DARK PREMIUM)
 ================================= */
 .contact-hero {
-    min-height: 100vh;
-    padding: 140px 0;
+    min-height: 90vh;
+    padding: 80px 0;
     position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 /* Background (gradient instead of image = premium look) */
 .contact-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 20% 30%, rgba(191,247,71,0.08), transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(191,247,71,0.05), transparent 40%),
-                #060606;
     z-index: 0;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)),
+        url("../assets/images/Untitled design (3).jpg.jpeg") no-repeat;
+
+    background-size: cover;
+    background-position: 30% center;
 }
 
 /* subtle overlay grid effect */
 .contact-overlay {
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    z-index: 1;
+      position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 1;
 }
+
+.contact-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 /* ===============================
    LEFT TEXT
@@ -237,6 +250,7 @@ section {
     box-shadow: 0 30px 80px rgba(0,0,0,0.6);
     position: relative;
     overflow: hidden;
+    margin-top: 70px;
 }
 
 /* glowing border effect */

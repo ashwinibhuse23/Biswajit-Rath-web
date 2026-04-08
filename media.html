@@ -2,39 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Biswajit Rath | Humanizing AI & Transforming Enterprises</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Rath – Media & Recognition</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
 
-    <!-- Meta SEO -->
-    <meta name="description"
-        content="Portfolio of Dr. Biswajit Rath - 25+ years leading AI-first digital transformation.">
-
-    <!-- Fonts: Big Shoulders Display (Headings) & Kanit (Body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700;800&family=Kanit:wght@300;400;500&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg" data-aos="fade-down">
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg" data-aos="fade-down">
     <div class="container-fluid px-lg-5">
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -63,32 +53,32 @@
                 </a>
               </li>
 
-               <li>
+              <li>
                 <a class="dropdown-item" href="#coaching">
-                 Executive Coaching & Mentoring
+                  Executive Coaching & Mentoring
                 </a>
               </li>
 
-               <li>
+              <li>
                 <a class="dropdown-item" href="#academic">
-                 Academic & Institutional Engagements
+                  Academic & Institutional Engagements
                 </a>
               </li>
 
-               <li>
+              <li>
                 <a class="dropdown-item" href="#workshops">
-                 Speaking Engagements & Workshops
+                  Speaking Engagements & Workshops
                 </a>
               </li>
 
-               <li>
+              <li>
                 <a class="dropdown-item" href="#startup">
                   Startup Mentorship
                 </a>
               </li>
             </ul>
           </li>
-        
+
           <li class="nav-item"><a class="nav-link btnpress" href="media.html">Media & Recognition</a></li>
           <li class="nav-item"><a class="nav-link btnpress" href="thought.html">Thought Leadership</a></li>
           <li class="nav-item ms-lg-3">
@@ -99,201 +89,612 @@
     </div>
   </nav>
 
- <section class="media-section">
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero">
+    <div class="hero-lines"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <div class="hero-badge">Overview</div>
 
-  <!-- HERO -->
-  <div class="container hero">
-    <h1>Media & Recognition</h1>
-    <p>
-      Dr. Rath’s work at the intersection of AI, human-centered design, and enterprise transformation 
-      has been widely recognized across industry and academia.
-    </p>
-  </div>
-
-  <!-- AWARDS -->
-  <div class="container section">
-    <h2>Awards & Honors</h2>
-    <div class="grid cards">
-      <div class="card">
-        <h4>CAO of the Year</h4>
-        <p>BW AWS Generative AI Hackathon</p>
-      </div>
-      <div class="card">
-        <h4>2nd Prize</h4>
-        <p>AWS Generative AI Hackathon</p>
-      </div>
-      <div class="card">
-        <h4>Technology Leader Award</h4>
-        <p>Financial Express – AI in Consumer Applications</p>
-      </div>
-      <div class="card">
-        <h4>GenAI Leader</h4>
-        <p>Recognized across industry platforms</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SPEAKING -->
-  <div class="container section">
-    <h2>Speaking & Thought Leadership</h2>
-    <div class="grid two-col">
-      <div>
-        <p>
-          A sought-after voice on AI strategy, human-centered systems, and enterprise transformation.
-        </p>
-
-        <ul>
-          <li>IIT Mandi – AI & Systems Thinking</li>
-          <li>GenAI Conclaves & Industry Forums</li>
-          <li>Enterprise AI Platforms</li>
-        </ul>
-      </div>
-
-      <div class="tags">
-        <span>Humanising AI</span>
-        <span>Problem Definition</span>
-        <span>Enterprise AI</span>
-        <span>Systems Thinking</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ACADEMIC -->
-  <div class="container section">
-    <h2>Academic Contributions</h2>
-    <div class="grid cards">
-      <div class="card">Board of Studies – LIBA, TISS, ITM</div>
-      <div class="card">Industry–Academia Collaborations</div>
-      <div class="card">Curriculum & Advisory Contributions</div>
-    </div>
-  </div>
-
-  <!-- MENTORSHIP -->
-  <div class="container section stats">
-    <h2>Mentorship & Impact</h2>
-    <div class="grid stats-grid">
-      <div><h3>500+</h3><p>Students Mentored</p></div>
-      <div><h3>200+</h3><p>Professionals Transitioned</p></div>
-      <div><h3>AI</h3><p>Mentoring Platforms</p></div>
-    </div>
-  </div>
-
-  <!-- PUBLICATION -->
-  <div class="container section highlight">
-    <h2>Publications</h2>
-    <div class="book-card">
-      <div class="book-img"></div>
-      <div>
-        <h3>AI Wake-Up Call</h3>
-        <p>
-          A perspective on the evolving role of AI and the importance of human-centered thinking.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ENTERPRISE IMPACT -->
-  <div class="container section stats">
-    <h2>Enterprise Impact</h2>
-    <div class="grid stats-grid">
-      <div><h3>₹3500+ Cr</h3><p>Revenue Impact</p></div>
-      <div><h3>₹75+ Cr</h3><p>AI Investments</p></div>
-      <div><h3>15–25%</h3><p>Efficiency Gains</p></div>
-      <div><h3>30%</h3><p>Faster Decisions</p></div>
-    </div>
-  </div>
-
-  <!-- MEDIA -->
-  <div class="container section">
-    <h2>Media & Industry Presence</h2>
-    <div class="grid cards">
-      <div class="card">Industry Panels & Roundtables</div>
-      <div class="card">AI & Digital Forums</div>
-      <div class="card">Academic Collaborations</div>
-    </div>
-  </div>
-
-</section>
-    <!-- Footer -->
-    <footer id="footer" class="py-3 bg-darker text-white">
-        <div class="container">
-            <div class="row border-top border-secondary border-opacity-10">
-                <div class="col-12 text-center small">
-                    Designed by <a class="company-name" href="https://probusstudio.com/">Probus Studio</a>. </div>
-            </div>
+          <div class="hero-divider"></div>
+          <p class="hero-sub">Dr. Rath’s work at the intersection of AI, human-centered design, and enterprise
+            transformation has been widely recognized across industry, academia, and leadership forums. His
+            contributions reflect not just technical excellence, but a commitment to shaping responsible and impactful
+            AI adoption.</p>
         </div>
-    </footer>
+        <div class="col-lg-6">
+          <div class="hero-portrait-wrap">
+            <div class="hero-portrait-frame"></div>
+            <img src="assets/images/aboutImag.png" alt="Dr. Rath – Portrait"
+              class="hero-portrait" />
+            <div class="hero-portrait-badge">AI Strategist &amp; Thought Leader</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <small>Scroll</small>
+      <span><i class="fas fa-chevron-down" style="color:var(--gold)"></i></span>
+    </div>
+  </section>
 
-    <!-- GSAP Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+ 
 
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+  <!-- ══════════════ AWARDS ══════════════ -->
+  <section class="awards-section" id="awards">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-6">
+          <div class="section-label">Awards &amp; Honors</div>
+          <h2 class="section-title">Recognised for <em>Excellence</em></h2>
+          <p class="mt-3" style="color:var(--text-muted);font-size:.9rem;line-height:1.8;">Excellence in AI, analytics,
+            and measurable business impact — acknowledged across India's most prestigious platforms.</p>
+        </div>
+      </div>
 
-    <!-- Vanilla Tilt -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.js"
-        integrity="sha512-0eckjEcIDNlyXFNRAL2Kecw71G5Df+nI2kazjvQrH/DZEHYOdy0UnP0gAlQGZMq4ZOOHpc2eYG15N3JZDA6pGg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <div class="row g-4 mb-5">
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-trophy"></i></div>
+            <h5>CAO of the Year</h5>
+            <p>BW AWS Generative AI Hackathon — recognised as Chief AI Officer of the Year</p>
+            <div class="award-number">01</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-medal"></i></div>
+            <h5>2nd Prize</h5>
+            <p>AWS Generative AI Hackathon — national-level competitive recognition</p>
+            <div class="award-number">02</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-star"></i></div>
+            <h5>Technology Leader</h5>
+            <p>Financial Express — Best Use of AI in Consumer Application</p>
+            <div class="award-number">03</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3 reveal">
+          <div class="award-card">
+            <div class="award-icon"><i class="fas fa-robot"></i></div>
+            <h5>GenAI Leader</h5>
+            <p>Recognised as a GenAI Leader across multiple industry platforms</p>
+            <div class="award-number">04</div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+      <!-- Award Photos -->
+      <div class="reveal">
+        <p class="section-label mb-3">Award Moments</p>
+        <div class="row g-2">
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/awards.jpg" alt="Award Ceremony" />
+              <div class="photo-overlay"><span>Award Ceremony</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/award2.jpg" alt="BW AWS Hackathon" />
+              <div class="photo-overlay"><span>BW AWS Hackathon</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/award3.jpg" alt="Financial Express Award" />
+              <div class="photo-overlay"><span>Financial Express</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/award4.jpg" alt="GenAI Leader" />
+              <div class="photo-overlay"><span>GenAI Leader Recognition</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+ 
+  <!-- ══════════════ SPEAKING ══════════════ -->
+  <section class="speaking-section" id="speaking">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-6">
+          <div class="section-label">Speaking &amp; Thought Leadership</div>
+          <h2 class="section-title">A Voice That <em>Shapes</em> Thinking</h2>
+        </div>
+        <div class="col-lg-5 offset-lg-1 d-flex align-items-end">
+          <p style="color:var(--text-muted);font-size:.88rem;line-height:1.8;">Invited speaker at leading institutions
+            and industry platforms — bringing clarity, conviction, and creative foresight to every stage.</p>
+        </div>
+      </div>
 
-    <!-- Typewriter Effect -->
-    <script>
-        const words = ["Humanizing AI ", "Transforming Enterprises ", "Shaping Future Leaders"];
-        let x = 0;
-        let y = 0;
-        let currentWord = "";
-        let isDeleting = false;
-        const typeSpeed = 100;
-        const deleteSpeed = 50;
-        const waitTime = 2000; // Time the word stays visible
+      <div class="row g-3 mb-5">
+        <div class="col-md-4 reveal">
+          <div class="speaking-card">
+            <div class="speaking-icon"><i class="fas fa-university"></i></div>
+            <div>
+              <h6>IIT Mandi</h6>
+              <p>AI &amp; Systems Thinking Sessions — engaging the brightest engineering minds</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="speaking-card">
+            <div class="speaking-icon"><i class="fas fa-microphone-alt"></i></div>
+            <div>
+              <h6>GenAI Conclaves</h6>
+              <p>Industry forums shaping policy, strategy, and the future of AI adoption</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="speaking-card">
+            <div class="speaking-icon"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <h6>Leadership Platforms</h6>
+              <p>Enterprise AI transformation sessions for C-suite and senior leadership</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        function type() {
-            currentWord = words[x];
+      <div class="mb-5 reveal">
+        <p class="mb-3" style="font-size:.77rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);">
+          Key Themes</p>
+        <span class="theme-pill"><i class="fas fa-brain me-1"></i> Humanising AI</span>
+        <span class="theme-pill"><i class="fas fa-search me-1"></i> Problem Definition in AI</span>
+        <span class="theme-pill"><i class="fas fa-building me-1"></i> Enterprise AI Transformation</span>
+        <span class="theme-pill"><i class="fas fa-sitemap me-1"></i> Systems Thinking for Leaders</span>
+      </div>
 
-            if (isDeleting) {
-                document.getElementById("typewriter").textContent = currentWord.substring(0, y - 1);
-                y--;
-                if (y == 0) {
-                    isDeleting = false;
-                    x = (x + 1) % words.length;
-                }
-            } else {
-                document.getElementById("typewriter").textContent = currentWord.substring(0, y + 1);
-                y++;
-                if (y == currentWord.length) {
-                    isDeleting = true;
-                    setTimeout(type, waitTime);
-                    return;
-                }
-            }
+      <!-- Speaking Photos — asymmetric featured layout -->
+      <div class="reveal">
+        <p class="section-label mb-3">On Stage</p>
+        <div class="row g-2">
+          <div class="col-md-7">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/speaking1.jpeg" alt="IIT Mandi Session" style="aspect-ratio:16/10;" />
+              <div class="photo-overlay"><span>IIT Mandi — AI &amp; Systems Thinking</span></div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="row g-2 h-100">
+              <div class="col-6 col-md-6">
+                <div class="photo-item" onclick="openLightbox(this)">
+                  <img src="assets/media/speaking2.jpeg" alt="GenAI Conclave" />
+                  <div class="photo-overlay"><span>GenAI Conclave</span></div>
+                </div>
+              </div>
+              <div class="col-6 col-md-6">
+                <div class="photo-item" onclick="openLightbox(this)">
+                  <img src="assets/media/speaking3.jpeg" alt="Industry Forum" />
+                  <div class="photo-overlay"><span>Industry Forum</span></div>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
+
+
+  <!-- ══════════════ IMPACT ══════════════ -->
+  <section class="impact-section" id="impact">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="section-label justify-content-center">Enterprise Impact Recognition</div>
+        <h2 class="section-title">Numbers That <em>Tell the Story</em></h2>
+      </div>
+      <div class="row g-0 reveal">
+        <div class="col-6 col-md-3">
+          <div class="impact-block">
+            <div class="impact-number">₹3500<span style="font-size:1.4rem">Cr+</span></div>
+            <div class="impact-label">Revenue impact through AI-led initiatives</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="impact-block">
+            <div class="impact-number">₹75<span style="font-size:1.4rem">Cr+</span></div>
+            <div class="impact-label">AI investment portfolio managed</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="impact-block">
+            <div class="impact-number">25<span style="font-size:1.4rem">%</span></div>
+            <div class="impact-label">Efficiency improvement across operations</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="impact-block">
+            <div class="impact-number">30<span style="font-size:1.4rem">%</span></div>
+            <div class="impact-label">Improvement in decision-making speed</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Impact Photos -->
+      <div class="reveal mt-5">
+        <p class="section-label justify-content-center mb-3">Enterprise Recognition</p>
+        <div class="row g-2 justify-content-center">
+          <div class="col-6 col-md-4">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/enterprise.jpg" alt="Enterprise AI" />
+              <div class="photo-overlay"><span>Enterprise AI Initiative</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/enterprise2.jpg" alt="AI Transformation" />
+              <div class="photo-overlay"><span>AI Transformation</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/enterprise3.jpg" alt="Operations Excellence" />
+              <div class="photo-overlay"><span>Operations Excellence</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ══════════════ MENTORSHIP ══════════════ -->
+  <section class="mentorship-section" id="mentorship">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-6">
+          <div class="section-label">Mentorship &amp; Impact</div>
+          <h2 class="section-title">Guiding the Next <em>Generation</em></h2>
+          <p class="mt-3" style="color:var(--text-muted);font-size:.9rem;line-height:1.8;">Dr. Rath's mentorship touches
+            hundreds of students and professionals, building capacity for an AI-native future.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-md-4 reveal">
+          <div class="mentor-stat">
+            <div class="big">500+</div>
+            <div class="desc">Students mentored across academic ecosystems</div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="mentor-stat">
+            <div class="big">200+</div>
+            <div class="desc">Professionals coached into AI careers</div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal">
+          <div class="mentor-stat">
+            <div class="big">∞</div>
+            <div class="desc">Virtual mentoring &amp; academic platforms</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mentorship Photos -->
+      <div class="reveal">
+        <p class="section-label mb-3">Mentorship Moments</p>
+        <div class="row g-2">
+          <div class="col-md-5">
+            <div class="photo-item" onclick="openLightbox(this)" style="height:100%">
+              <img src="assets/media/mentorship1.jpg" alt="Mentorship"
+                style="height:100%;aspect-ratio:unset;min-height:220px;" />
+              <div class="photo-overlay"><span>One-on-One Mentorship</span></div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ══════════════ PUBLICATION ══════════════ -->
+  <section class="pub-section" id="publication">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-6">
+          <div class="section-label">Publications &amp; Authoring</div>
+          <h2 class="section-title">Sharing Insights to <em>Drive Action</em></h2>
+        </div>
+      </div>
+      <div class="row justify-content-center reveal">
+        <div class="col-lg-10">
+          <div class="book-card">
+            <div class="book-spine">AI WAKE-UP CALL</div>
+            <div class="book-cover">
+              <img src="assets/Book/Front2.jpeg" alt="AI Wake-Up Call – Book Cover" />
+            </div>
+            <div class="book-content">
+              <div class="section-label mb-2">Book</div>
+              <h3>AI Wake-Up Call</h3>
+              <p>A compelling perspective on the evolving role of artificial intelligence and the urgent need for
+                human-centred thinking in its adoption. Dr. Rath challenges organisations and leaders to move beyond
+                hype — and build AI that truly serves people.</p>
+              <div class="mt-3">
+                <span class="theme-pill">Human-Centred AI</span>
+                <span class="theme-pill">Enterprise Strategy</span>
+                <span class="theme-pill">Responsible Adoption</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ══════════════ ACADEMIC ══════════════ -->
+  <section class="academic-section" id="academic">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-6">
+          <div class="section-label">Academic &amp; Institutional</div>
+          <h2 class="section-title">Shaping <em>Future-Ready</em> Talent</h2>
+          <p class="mt-3" style="color:var(--text-muted);font-size:.9rem;line-height:1.8;">Member of Board of Studies
+            and advisor to leading institutions — bridging academia and industry.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-6 col-md-4 reveal">
+          <div class="institution-card">
+            <img src="assets/media/acedemic1.jpg" alt="LIBA" />
+            <div class="inst-body">
+              <div class="inst-name">LIBA</div>
+              <div class="inst-role">Board of Studies Member</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 reveal">
+          <div class="institution-card">
+            <img src="assets/media/acedemic2.jpg" alt="TISS" />
+            <div class="inst-body">
+              <div class="inst-name">TISS</div>
+              <div class="inst-role">Board of Studies Member</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 reveal">
+          <div class="institution-card">
+            <img src="assets/media/acedemic3.jpg" alt="ITM" />
+            <div class="inst-body">
+              <div class="inst-name">ITM</div>
+              <div class="inst-role">Board of Studies Member</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-5 reveal">
+        <div class="col-md-4">
+          <div class="speaking-card">
+            <div class="speaking-icon"><i class="fas fa-book-open"></i></div>
+            <div>
+              <h6>Curriculum Design</h6>
+              <p>Contributing to AI-aligned curriculum across partner institutions</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="speaking-card">
+            <div class="speaking-icon"><i class="fas fa-handshake"></i></div>
+            <div>
+              <h6>Industry Bridges</h6>
+              <p>Translating AI practice into real academic value</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="speaking-card">
+            <div class="speaking-icon"><i class="fas fa-user-graduate"></i></div>
+            <div>
+              <h6>Academic Advisory</h6>
+              <p>Strategic mentoring and guidance for institutional growth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Photos -->
+      <div class="reveal">
+        <p class="section-label mb-3">Campus Collaborations</p>
+        <div class="row g-2">
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/acedemic4.jpg" alt="Board Session" />
+              <div class="photo-overlay"><span>Board of Studies</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/acedemic5.jpg" alt="Curriculum" />
+              <div class="photo-overlay"><span>Curriculum Session</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/acedemic6.jpg" alt="Faculty" />
+              <div class="photo-overlay"><span>Faculty Interaction</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="assets/media/acedemic7.jpg" alt="Student Engagement" />
+              <div class="photo-overlay"><span>Student Engagement</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ══════════════ MEDIA PRESENCE ══════════════ -->
+  <section class="media-section" id="media">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-6">
+          <div class="section-label">Media &amp; Industry Presence</div>
+          <h2 class="section-title">Conversations That <em>Shape the Future</em></h2>
+        </div>
+      </div>
+
+      <div class="mb-5 reveal">
+        <span class="media-tag"><i class="fas fa-users"></i> Industry Panels &amp; Roundtables</span>
+        <span class="media-tag"><i class="fas fa-microchip"></i> AI &amp; Digital Transformation Forums</span>
+        <span class="media-tag"><i class="fas fa-graduation-cap"></i> Academic Collaborations</span>
+        <span class="media-tag"><i class="fas fa-chess-king"></i> Leadership Discussions</span>
+        <span class="media-tag"><i class="fas fa-newspaper"></i> Industry Publications</span>
+        <span class="media-tag"><i class="fas fa-podcast"></i> Podcasts &amp; Webinars</span>
+      </div>
+
+      <!-- Media Photos — large feature layout -->
+      <div class="reveal">
+        <p class="section-label mb-3">Media Appearances</p>
+        <div class="row g-2">
+          <div class="col-md-8">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/med1/900/500" alt="Panel Discussion" style="aspect-ratio:16/9;" />
+              <div class="photo-overlay"><span>Industry Panel Discussion</span></div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex flex-column gap-2">
+            <div class="photo-item" onclick="openLightbox(this)" style="flex:1">
+              <img src="https://picsum.photos/seed/med2/500/280" alt="Roundtable"
+                style="height:100%;min-height:120px;aspect-ratio:unset;" />
+              <div class="photo-overlay"><span>Roundtable</span></div>
+            </div>
+            <div class="photo-item" onclick="openLightbox(this)" style="flex:1">
+              <img src="https://picsum.photos/seed/med3/500/280" alt="Podcast"
+                style="height:100%;min-height:120px;aspect-ratio:unset;" />
+              <div class="photo-overlay"><span>Podcast Feature</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/med4/600/450" alt="Industry Forum" />
+              <div class="photo-overlay"><span>Industry Forum</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/med5/600/450" alt="Webinar" />
+              <div class="photo-overlay"><span>Webinar</span></div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4">
+            <div class="photo-item" onclick="openLightbox(this)">
+              <img src="https://picsum.photos/seed/med6/600/450" alt="Press Feature" />
+              <div class="photo-overlay"><span>Press Feature</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- ══════════════ CTA ══════════════ -->
+  <section class="cta-section" id="connect">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-label justify-content-center mb-3">Get in Touch</div>
+        <h2 class="cta-title">Invite Dr. Rath to<br><em>Speak or Collaborate</em></h2>
+        <p class="cta-sub">Interested in featuring Dr. Rath at your event, platform, or institution? Let's connect.</p>
+      </div>
+      <div class="cta-form-wrapper reveal">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label class="form-label">Your Name</label>
+            <input type="text" class="form-control" placeholder="Full name" />
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label">Organisation</label>
+            <input type="text" class="form-control" placeholder="Company / Institution" />
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="you@example.com" />
+          </div>
+          <div class="col-sm-6">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" placeholder="+91 00000 00000" />
+          </div>
+          <div class="col-12">
+            <label class="form-label">Purpose of Collaboration</label>
+            <select class="form-select">
+              <option value="" disabled selected>Select an option</option>
+              <option>Speaking Engagement / Keynote</option>
+              <option>Panel / Roundtable</option>
+              <option>Academic Advisory / Board</option>
+              <option>Mentorship Programme</option>
+              <option>Media Feature / Interview</option>
+              <option>Enterprise AI Consulting</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Brief Message</label>
+            <textarea class="form-control" rows="3"
+              placeholder="Tell us about your event or collaboration idea..."></textarea>
+          </div>
+          <div class="col-12 mt-1">
+            <button class="btn btn-gold">Send Invitation <i class="fas fa-arrow-right ms-2"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--dark2);border-top:1px solid rgba(201,168,76,.1);padding:2rem 0;text-align:center;">
+    <p style="color:var(--text-muted);font-size:.75rem;margin:0;letter-spacing:.08em;">
+      © 2025 Dr. Rath · AI Strategist &amp; Thought Leader · All Rights Reserved
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          io.unobserve(e.target);
         }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-        // Start the typing effect
-        document.addEventListener('DOMContentLoaded', type);
-    </script>
-
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-
-    <!--ThreeJS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-
-    <script src="js/book.js"></script>
-
+    // Lightbox
+    function openLightbox(el) {
+      document.getElementById('lightbox-img').src = el.querySelector('img').src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.getElementById('lightbox').addEventListener('click', e => { if (e.target === document.getElementById('lightbox')) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
 </body>
 
 </html>
