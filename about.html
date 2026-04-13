@@ -107,9 +107,7 @@
     <div class="container-fluid h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-6 col-md-8 col-10">
-          <h1 class="about-title">
-            About <br> Dr. Biswajit Rath
-          </h1>
+         
         </div>
       </div>
     </div>
@@ -163,7 +161,7 @@
 
         <!-- Highlight Quote -->
         <div class="story-quote center-quote">
-          <h4>AI should enhance humanity, not replace it.</h4>
+          <h4 id="typewriter">AI should enhance humanity, not replace it.</h4>
         </div>
 
         <div class="story-block">
@@ -209,6 +207,9 @@
 
     blocks.forEach(block => observer.observe(block));
   </script>
+
+
+
 
   <!-- CTA SECTION -->
   <section class="rath-cta-section premium-cta">
@@ -562,6 +563,12 @@
     </div>
   </footer>
 
+
+
+
+
+  
+
   <!-- GSAP Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -587,7 +594,7 @@
 
   <!-- Typewriter Effect -->
   <script>
-    const words = ["Humanizing AI ", "Transforming Enterprises ", "Shaping Future Leaders"];
+    const words = ["AI should be built to help us thrive, not to take our place. ", "AI should enhance humanity, not replace it. ", "Shaping Future Leaders"];
     let x = 0;
     let y = 0;
     let currentWord = "";

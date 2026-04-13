@@ -19,9 +19,9 @@ const optimizeTexture = (texture) => {
     texture.generateMipmaps = true;
 };
 
-const frontCover = loader.load('./assets/Book/Front2.jpeg', optimizeTexture);
+const frontCover = loader.load('./assets/Book/frontbook.jpeg', optimizeTexture);
 const backCover = loader.load('./assets/Book/Back2.jpeg', optimizeTexture);
-const sideCover = loader.load('./assets/Book/Side2.jpeg', optimizeTexture); // This is your spine
+const sideCover = loader.load('./assets/Book/slidebook.png', optimizeTexture); // This is your spine
 
 const pageColor = new THREE.MeshPhongMaterial({ color: 0xffffff }); // White for top, bottom, and right edges
 
