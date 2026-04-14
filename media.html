@@ -98,8 +98,9 @@
     <div class="container">
       <div class="hero-content">
 
-      <h1>Media & Recognition in <br>
-        <span class="highlight-1"> AI Leadership</span></h1>
+        <h1>Media & Recognition in <br>
+          <span class="highlight-1"> AI Leadership</span>
+        </h1>
 
 
         <p class="hero-sub">
@@ -178,7 +179,7 @@
               <div class="img-box small portrait">
                 <img src="assets/media/awards2.png" alt="award">
               </div>
-             
+
 
               <div class="img-box small">
                 <img src="assets/media/awards5.jpeg" alt="award">
@@ -210,174 +211,205 @@
 
 
   <!-- ══════════════ SPEAKING ══════════════ -->
- <section class="speaking-section">
-  <div class="container">
-    <div class="row align-items-center g-5">
+  <section class="speaking-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
 
-      <!-- LEFT IMAGES -->
-      <div class="col-lg-6">
-        <div class="image-layout">
+        <!-- LEFT IMAGES -->
+        <div class="col-lg-6">
+          <div class="image-layout animate animate-left">
 
-          <div class="img primary">
-            <img src="assets/media/speaking1.jpeg" alt="">
-          </div>
-
-          <div class="img secondary">
-            <img src="assets/media/speaking.jpg" alt="">
-          </div>
-
-        </div>
-      </div>
-
-      <!-- RIGHT CONTENT -->
-      <div class="col-lg-6">
-        <div class="speaking-content">
-
-          <span class="tag">Speaking & Thought Leadership</span>
-
-          <h2 class="title">
-            Invited speaker at leading institutions and industry platforms
-          </h2>
-
-          <p class="desc-1">
-            Dr. Rath is a sought-after speaker at leading institutions and global
-            industry platforms, known for bridging advanced AI with human-centered
-            enterprise transformation.
-          </p>
-
-          <div class="block">
-            <h6>Selected Engagements</h6>
-            <ul>
-              <li>IIT Mandi – AI & Systems Thinking Sessions</li>
-              <li>GenAI Conclaves & Industry Forums</li>
-              <li>Leadership & Enterprise AI Platforms</li>
-            </ul>
-          </div>
-
-          <div class="block">
-            <h6>Key Themes</h6>
-            <div class="themes">
-              <span>Humanising AI</span>
-              <span>Problem Definition in AI</span>
-              <span>Enterprise AI Transformation</span>
-              <span>Systems Thinking</span>
+            <div class="img primary">
+              <img src="assets/media/speaking1.jpeg" alt="">
             </div>
+
+            <div class="img secondary">
+              <img src="assets/media/speaking.jpg" alt="">
+            </div>
+
           </div>
-
         </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-lg-6">
+          <div class="speaking-content animate animate-right">
+
+            <span class="tag">Speaking & Thought Leadership</span>
+
+            <h2 class="title">
+              Invited speaker at leading institutions and industry platforms
+            </h2>
+
+            <p class="desc-1">
+              Dr. Rath is a sought-after speaker at leading institutions and global
+              industry platforms, known for bridging advanced AI with human centered
+              enterprise transformation.
+            </p>
+
+            <div class="block">
+              <h6>Selected Engagements</h6>
+              <ul>
+                <li>IIT Mandi – AI & Systems Thinking Sessions</li>
+                <li>GenAI Conclaves & Industry Forums</li>
+                <li>Leadership & Enterprise AI Platforms</li>
+              </ul>
+            </div>
+
+            <div class="block">
+              <h6>Key Themes</h6>
+              <div class="themes">
+                <span>Humanising AI</span>
+                <span>Problem Definition in AI</span>
+                <span>Enterprise AI Transformation</span>
+                <span>Systems Thinking</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".animate");
 
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    });
+  </script>
 
 
   <!-- ══════════════ ACADEMIC ══════════════ -->
- <section class="academic-section">
-  <div class="container">
+  <section class="academic-section fade-up">
+    <div class="container">
 
-    <div class="academic-grid">
+      <div class="academic-grid">
 
-      <!-- LEFT -->
-      <div class="academic-content">
-        <span class="tag">Academic & Institutional Contributions</span>
+        <!-- LEFT -->
+        <div class="academic-content">
+          <span class="tag fade-up fade-delay-1">Academic & Institutional Contributions</span>
 
-        <h2>
-          Shaping Future-Ready Talent <br>
-          & Academic Direction
-        </h2>
+          <h2 class="fade-up fade-delay-2">
+            Shaping Future-Ready Talent <br>
+            & Academic Direction
+          </h2>
 
-        <p class="desc">
-          Contributing to academia through strategic advisory, curriculum design,
-          and industry collaboration—enabling institutions to stay aligned with
-          evolving business and technology landscapes.
-        </p>
+          <p class="desc fade-up fade-delay-3">
+            Contributing to academia through strategic advisory, curriculum design,
+            and industry collaboration enabling institutions to stay aligned with
+            evolving business and technology landscapes.
+          </p>
 
-        <div class="academic-list">
-          <div class="item">Member, Board of Studies – LIBA, TISS, ITM</div>
-          <div class="item">Collaborations bridging academia and industry</div>
-          <div class="item">Curriculum design, mentoring & academic advisory</div>
+          <div class="academic-list">
+            <div class="item fade-up fade-delay-1">Member, Board of Studies – LIBA, TISS, ITM</div>
+            <div class="item fade-up fade-delay-2">Collaborations bridging academia and industry</div>
+            <div class="item fade-up fade-delay-3">Curriculum design, mentoring & academic advisory</div>
+          </div>
         </div>
+
+        <!-- RIGHT -->
+        <div class="academic-images">
+          <img class="fade-up fade-delay-2" src="assets/media/acedemic1.jpg" alt="">
+          <img class="fade-up fade-delay-3" src="assets/media/acedemic6.jpg" alt="">
+        </div>
+
       </div>
 
-      <!-- RIGHT -->
-      <div class="academic-images">
-        <img src="assets/media/acedemic1.jpg" alt="">
-        <img src="assets/media/acedemic6.jpg" alt="">
+      <!-- BOTTOM STRIP -->
+      <div class="academic-highlights">
+        <div class="highlight fade-up fade-delay-1">Board Membership</div>
+        <div class="highlight fade-up fade-delay-2">Industry Collaboration</div>
+        <div class="highlight fade-up fade-delay-3">Curriculum Design</div>
+        <div class="highlight fade-up fade-delay-4">Mentorship</div>
       </div>
 
     </div>
+  </section>
 
-    <!-- BOTTOM STRIP -->
-    <div class="academic-highlights">
-      <div class="highlight">Board Membership</div>
-      <div class="highlight">Industry Collaboration</div>
-      <div class="highlight">Curriculum Design</div>
-      <div class="highlight">Mentorship</div>
-    </div>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
 
-  </div>
-</section>
+    document.querySelectorAll(".fade-up").forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+
 
 
   <!-- mentorship -->
 
- <section class="mentorship-impact-v3">
-  <div class="container">
+  <section class="mentorship-impact-v3">
+    <div class="container">
 
-    <div class="impact-wrapper">
+      <div class="impact-wrapper">
 
-      <!-- LEFT IMAGE GROUP -->
-      <div class="impact-images">
-        <div class="img img-small">
-          <img src="assets/media/mentorship.jpg" alt="">
+        <!-- LEFT IMAGE GROUP -->
+        <div class="impact-images">
+
+
+          <div class="img img-large">
+            <img src="assets/media/Panel discussion on AI in sectors.png" alt="">
+          </div>
         </div>
 
-        <div class="img img-large">
-          <img src="assets/media/mentornship2.jpg" alt="">
+        <!-- RIGHT CONTENT -->
+        <div class="impact-content">
+          <span class="tag">Mentorship & Impact</span>
+
+          <h2>Guiding the Next Generation of AI Leaders</h2>
+
+          <p>
+            Empowering talent through hands-on mentorship, career transformation,
+            and strong collaboration with global learning ecosystems.
+          </p>
+
+          <div class="impact-stats">
+
+            <div class="stat">
+              <h3 class="counter" data-target="500">0</h3>
+              <span>Students Mentored</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat">
+              <h3 class="counter" data-target="200">0</h3>
+              <span>AI Career Transitions</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat">
+              <h3>Global</h3>
+              <span>Associated with virtual mentoring platforms and academic ecosystems</span>
+            </div>
+
+          </div>
         </div>
-      </div>
 
-      <!-- RIGHT CONTENT -->
-      <div class="impact-content">
-        <span class="tag">Mentorship & Impact</span>
-
-        <h2>Guiding the Next Generation of AI Leaders</h2>
-
-        <p>
-          Empowering talent through hands-on mentorship, career transformation,
-          and strong collaboration with global learning ecosystems.
-        </p>
-
-        <div class="impact-stats">
-
-          <div class="stat">
-            <h3 class="counter" data-target="500">0</h3>
-            <span>Students Mentored</span>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="stat">
-            <h3 class="counter" data-target="200">0</h3>
-            <span>AI Career Transitions</span>
-          </div>
-
-          <div class="divider"></div>
-
-          <div class="stat">
-            <h3>Global</h3>
-            <span>Associated with virtual mentoring platforms and academic ecosystems</span>
-          </div>
-
-        </div>
       </div>
 
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
@@ -447,53 +479,66 @@
 
     </div>
   </section>
+  <script>
+    const section = document.querySelector('.publication-section');
+
+    function revealSection() {
+      const top = section.getBoundingClientRect().top;
+      const trigger = window.innerHeight * 0.85;
+
+      if (top < trigger) {
+        section.classList.add('active');
+      }
+    }
+
+    window.addEventListener('scroll', revealSection);
+    revealSection(); // run once on load
+  </script>
+
+
 
 
   <section class="impact-section">
     <div class="container">
 
-      <!-- LEFT: IMAGES -->
-      <div class="impact-images">
-
-        <img src="assets/media/awards.jpg" alt="Business Strategy Meeting">
+      <!-- LEFT -->
+      <div class="impact-images reveal-left">
+        <img src="assets/media/awards.jpg" alt="Awards Recognition">
       </div>
 
-      <!-- RIGHT: CONTENT -->
-      <div class="impact-content">
-
+      <!-- RIGHT -->
+      <div class="impact-content reveal-right">
         <span class="tag">Enterprise Impact Recognition</span>
 
         <h2>Driving measurable transformation at scale</h2>
 
         <div class="impact-grid">
 
-          <div class="impact-item">
+          <div class="impact-item reveal-up">
             <h3>₹3500+ Cr</h3>
             <p>Revenue impact through AI-led initiatives</p>
           </div>
 
-          <div class="impact-item">
+          <div class="impact-item reveal-up">
             <h3>₹75 Cr+</h3>
             <p>AI investment portfolio managed</p>
           </div>
 
-          <div class="impact-item">
+          <div class="impact-item reveal-up">
             <h3>15–25%</h3>
             <p>Efficiency improvements across operations</p>
           </div>
 
-          <div class="impact-item">
+          <div class="impact-item reveal-up">
             <h3>30%</h3>
-            <p>improvement in decision-making speed </p>
+            <p>Improvement in decision-making speed</p>
           </div>
 
         </div>
-
       </div>
 
     </div>
   </section>
-
 
 
   <section class="media-alt">
@@ -502,11 +547,10 @@
 
         <!-- LEFT IMAGE -->
         <div class="media-image">
-          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" alt="Media Presence">
+          <img src="assets/media/media.jpg" alt="Media Presence">
 
           <div class="image-badge">
-            <h3>Global Presence</h3>
-            <p>Across leading platforms</p>
+           
           </div>
         </div>
 
@@ -578,6 +622,23 @@
       observer1.observe(el);
     });
   </script>
+  <script>
+    const reveals = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up");
+
+    function revealOnScroll() {
+      const windowHeight = window.innerHeight;
+
+      reveals.forEach((el) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 80) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+  </script>
 
 
 
@@ -605,9 +666,13 @@
 
         <select>
           <option>Type of Collaboration</option>
-          <option>Speaking Engagement</option>
-          <option>Workshop</option>
-          <option>Mentorship</option>
+          <option>Board & Advisory Roles</option>
+          <option>AI Strategy & Transformation Advisory</option>
+          <option>Executive Coaching & Mentoring</option>
+          <option>Academic & Institutional Engagements</option>
+          <option>Speaking Engagements & Workshops</option>
+          <option>Startup Mentorship</option>
+          <option>Other</option>
         </select>
 
         <textarea placeholder="Tell us what you're looking to collaborate on"></textarea>
@@ -624,14 +689,24 @@
     const btn = document.getElementById("openForm");
     const close = document.querySelector(".close");
 
-    btn.onclick = () => modal.style.display = "flex";
-    close.onclick = () => modal.style.display = "none";
+    btn.onclick = () => modal.classList.add("active");
+    close.onclick = () => modal.classList.remove("active");
 
     window.onclick = (e) => {
       if (e.target == modal) {
-        modal.style.display = "none";
+        modal.classList.remove("active");
       }
     };
+
+    const cta = document.querySelector(".cta-collab");
+
+    window.addEventListener("scroll", () => {
+      const rect = cta.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        cta.classList.add("show");
+      }
+    });
+
   </script>
 
 

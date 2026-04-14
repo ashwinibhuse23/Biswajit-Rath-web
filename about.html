@@ -212,31 +212,36 @@
 
 
   <!-- CTA SECTION -->
-  <section class="rath-cta-section premium-cta">
-    <div class="container position-relative">
+<section class="cta-band">
+  <div class="container">
 
-      <!-- Floating Glow Elements -->
-      <div class="cta-glow glow-1"></div>
-      <div class="cta-glow glow-2"></div>
+    <div class="cta-band-inner">
 
-      <div class="rath-cta-card" id="ctaCard">
+      <!-- LEFT -->
+      <div class="cta-text">
+        <p class="tag-1">Collaboration Opportunity</p>
 
-        <h2 class="cta-title">
-          Interested in collaborating with Dr. Rath?
+        <h2>
+          Let’s Build Meaningful Impact Together
         </h2>
 
-        <p class="cta-subtext">
-          Let’s build something meaningful together from ideas to impact.
+        <p>
+          Partner with Dr. Rath for consulting, academic collaboration,
+          and leadership engagements focused on human-centered AI.
         </p>
-
-        <button class="cta-btn primary-btn magnetic-btn" onclick="openForm()">
-          <span>Connect Now</span>
-        </button>
-
       </div>
-    </div>
-  </section>
 
+      <!-- RIGHT -->
+      <div class="cta-action">
+        <button class="cta-btn" onclick="openForm()">
+          Connect Now
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
   <!-- MODAL FORM -->
   <div class="form-modal" id="formModal">
@@ -314,6 +319,33 @@
     }
 
   </script>
+  <script>
+const cta = document.querySelector('.cta-band-inner');
+
+const observer1 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      cta.classList.add('show');
+    }
+  });
+}, { threshold: 0.3 });
+
+observer1.observe(cta);
+</script>
+<script>
+document.querySelector('.cta-btn').addEventListener('click', function(e) {
+  let ripple = document.createElement('span');
+  ripple.classList.add('ripple');
+
+  let rect = this.getBoundingClientRect();
+  ripple.style.left = (e.clientX - rect.left) + 'px';
+  ripple.style.top = (e.clientY - rect.top) + 'px';
+
+  this.appendChild(ripple);
+
+  setTimeout(() => ripple.remove(), 600);
+});
+</script>
 
 
 

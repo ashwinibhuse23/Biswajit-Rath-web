@@ -169,6 +169,32 @@ section {
   overflow: hidden; /* IMPORTANT */
 }
 
+
+.services-hero-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 10%;
+
+  width: 300px;
+  height: 300px;
+
+  background: radial-gradient(circle, rgba(191,247,71,0.25), transparent 70%);
+  filter: blur(60px);
+
+  animation: floatOrb 10s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes floatOrb {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(100px, -80px);
+  }
+}
+
 .hero-video {
   position: absolute;
   inset: 0;
@@ -180,6 +206,17 @@ section {
 
   filter: blur(2px); /* same blur feel */
   transform: scale(1.1); /* prevent edge cut */
+ animation: slowZoom 20s ease-in-out infinite alternate;
+
+}
+
+@keyframes slowZoom {
+  from {
+    transform: scale(1.1) translateY(0);
+  }
+  to {
+    transform: scale(1.2) translateY(-20px);
+  }
 }
 
 /* Dark Overlay */
@@ -209,12 +246,26 @@ section {
   backdrop-filter: blur(10px);
 }
 
+.services-title span,
+.services-title,
+.services-subtext,
+.hero-btn {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: smoothReveal 1s ease forwards;
+}
+
 /* Main Title */
 .services-title {
   font-size: 64px;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 30px;
+   animation-delay: 0.2s;
+}
+
+.services-title span {
+  animation-delay: 0.4s;
 }
 
 /* Gradient Text (IMPORTANT) */
@@ -222,6 +273,14 @@ section {
   background: var(--primary-color);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
 }
 
 /* Subtext */
@@ -230,6 +289,7 @@ section {
   color: var(--secondary-color);
   max-width: 700px;
   margin: 0 auto 40px;
+   animation-delay: 0.6s;
 }
 
 /* Button Upgrade */
@@ -241,12 +301,25 @@ section {
   border: none;
   color: #000000;
   transition: all 0.3s ease;
+  animation-delay: 0.8s;
 }
+
+
+
+
 
 .hero-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 40px rgba(208, 255, 0, 0.3);
 }
+@keyframes smoothReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* Background Glow */
 .services-ultra::before {
@@ -319,6 +392,35 @@ section {
   margin-top: 10px;
 }
 
+.services-grid-section::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(191,247,71,0.08), transparent 70%);
+  top: -200px;
+  left: -200px;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.services-grid-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,255,200,0.06), transparent 70%);
+  bottom: -200px;
+  right: -200px;
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.services-grid-section .container {
+  position: relative;
+  z-index: 1;
+}
+
 /* HEADING */
 .services-heading h2 {
   font-size: 55px;
@@ -350,12 +452,16 @@ section {
 /* CARD */
 .service-card-modern {
   background: var(--card-bg);
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
   padding: 30px;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+   opacity: 0;
+  transform: translateY(40px) scale(0.95);
 }
 
 /* GLOW EFFECT */
@@ -369,14 +475,27 @@ section {
   pointer-events: none;
 }
 
+
+
+
+
+
 .service-card-modern:hover::before {
   opacity: 1;
 }
 
 /* HOVER */
 .service-card-modern:hover {
-  transform: translateY(-10px);
+ transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
   border-color: var(--primary-color);
+}
+
+
+.service-card-modern.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ICON */
@@ -391,12 +510,20 @@ section {
   margin-bottom: 20px;
   color: var(--primary-color);
   font-size: 22px;
-  transition: 0.3s;
+ transition: all 0.4s ease;
 }
 
 .service-card-modern:hover .icon-box {
   background: var(--primary-color);
   color: #000;
+  transform: translateY(-5px) scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(191,247,71,0.4);
+}
+
+.service-card-modern h3,
+.service-card-modern p,
+.learn-more-btn {
+  transition: all 0.3s ease;
 }
 
 /* TEXT */
@@ -404,9 +531,18 @@ section {
   font-size: 28px;
   margin-bottom: 15px;
   color: var(--text-white);
+   
   
 }
 
+
+.service-card-modern:hover h3 {
+  transform: translateY(-2px);
+}
+
+.service-card-modern:hover p {
+  opacity: 0.85;
+}
 .service-card-modern p {
   font-size: 15px;
   color: var(--secondary-color);
