@@ -65,9 +65,7 @@ section {
     color: var(--text-white) !important;
 }
 
-.text-justify {
-    text-align: justify;
-}
+
 
 .fw-extra-bold {
     font-weight: 800;
@@ -161,17 +159,46 @@ section {
 }
 
 /* Dropdown base */
+/* RESET dropdown properly */
 .dropdown-menu {
-    background: #0a0a0a;
-    border-radius: 12px;
-    padding: 10px;
-    border: 1px solid rgba(255,255,255,0.05);
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s ease;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  background: #0a0a0a;
+  border-radius: 12px;
+  padding: 10px;
 }
+
+/* SHOW when active */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+/* Desktop hover */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile fix */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    background: transparent;
+    border: none;
+    padding-left: 10px;
+  }
+}
+
 
 /* Desktop hover dropdown */
 @media (min-width: 992px) {
@@ -185,20 +212,67 @@ section {
 
 /* Mobile dropdown fix */
 @media (max-width: 991px) {
+
+     .navbar-nav {
+    text-align: center;
+    gap: 18px !important;
+    padding-top: 20px;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  /* Services center */
+  .dropdown-toggle {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Dropdown items spacing */
+  .dropdown-item {
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  /* Contact button center */
+  .btn-contact {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+
   .dropdown-menu {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
+   
+    position: static;   /* mobile मध्ये absolute नको */
     display: none;
-    background: transparent;
-    border: none;
-    padding-left: 15px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
   }
 
   .dropdown-menu.show {
     display: block;
+    
+  opacity: 1;
+  visibility: visible;
+  }
+
+   .dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
   }
 }
+
+
+
+
+
 
 /* Dropdown items */
 .dropdown-item {
@@ -221,6 +295,71 @@ section {
 .dropdown.show .dropdown-toggle::after {
     transform: rotate(180deg);
 }
+
+
+
+/* navbar dropdown */
+/* Show dropdown on hover (desktop only) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Initial hidden state */
+.dropdown-menu {
+  display: none;   /* 🔥 IMPORTANT */
+  position: absolute; /* desktop साठी */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Premium styling */
+.dropdown-menu {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 240px;
+}
+
+/* Items */
+.dropdown-item {
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.dropdown-item:hover {
+  background: rgba(191, 247, 71, 0.12);
+  color: #bff747;
+  transform: translateX(4px);
+}
+
+
+
+.dropdown-toggle::after {
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
 
 
 
@@ -427,9 +566,10 @@ section {
 }
 
 .award-image-container img {
-    width: 300px;
+    width: 200px;
     height: auto;
     transition: transform 0.5s ease;
+    margin-block: 15px;
 }
 
 .award-container {
@@ -700,7 +840,7 @@ footer .company-name {
     }
 
     .hero-desc {
-        text-align: justify;
+        
         margin-bottom: 20px !important;
     }
 
@@ -805,57 +945,3 @@ footer .company-name {
 
 
 
-/* navbar dropdown */
-/* Show dropdown on hover (desktop only) */
-@media (min-width: 992px) {
-  .navbar .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-
-/* Initial hidden state */
-.dropdown-menu {
-  display: block;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-/* Premium styling */
-.dropdown-menu {
-  background: #0a0a0a;
-  border: 1px solid rgba(255,255,255,0.05);
-  border-radius: 12px;
-  padding: 10px;
-  min-width: 240px;
-}
-
-/* Items */
-.dropdown-item {
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-/* Hover effect */
-.dropdown-item:hover {
-  background: rgba(191, 247, 71, 0.12);
-  color: #bff747;
-  transform: translateX(4px);
-}
-
-
-
-.dropdown-toggle::after {
-  transition: transform 0.3s ease;
-}
-
-.dropdown:hover .dropdown-toggle::after {
-  transform: rotate(180deg);
-}

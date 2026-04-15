@@ -98,6 +98,39 @@
         </div>
     </nav>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdownToggle = document.querySelector("#servicesDropdown");
+
+    if (dropdownToggle) {
+        let clickCount = 0;
+
+        dropdownToggle.addEventListener("click", function (e) {
+
+            if (window.innerWidth < 992) {
+                clickCount++;
+
+                const parent = this.parentElement;
+                const menu = this.nextElementSibling;
+
+                if (clickCount === 1) {
+                    e.preventDefault(); // first click → open dropdown
+                    parent.classList.add("show");
+                    menu.classList.add("show");
+                } else {
+                    // second click → allow redirect
+                    clickCount = 0;
+                    window.location.href = this.getAttribute("href");
+                }
+            }
+
+        });
+    }
+
+});
+    </script>
+
     <!-- Hero Section -->
     <section id="home" class="hero-section position-relative ">
         <div class="container-fluid px-lg-5">
@@ -472,10 +505,28 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 mb-5 mb-lg-0">
                     <!-- Book Cover Image -->
-                    <div class="book-cover-wrapper position-relative">
+                    <div class="book-cover-wrapper position-relative d-none d-md-block">
                         <div id="book-container" style="width: 100%; height: 500px; cursor: grab; background: #222;">
                         </div>
                     </div>
+
+
+                    <div class="book-cover-wrapper position-relative d-md-none d-block">
+                        <div id="book-container" style="width: 90%; height: 480px; cursor: grab; background: #222;">
+                            <img src="assets/Book/book mockup -1.jpg.jpeg" alt="Book Cover" class="book-img">
+                        </div>
+                    </div>
+                    <style>
+                       
+
+                        .book-img {
+                            width: 110%;
+                            height: 105%;
+                            object-fit: cover;
+                            /* or 'contain' if you don't want cropping */
+                        }
+                    </style>
+
                 </div>
                 <div class="col-lg-7 ps-lg-5">
                     <h6 class="text-primary text-uppercase mb-2">Featured Work</h6>
@@ -529,7 +580,7 @@
                         <p class="text-secondary small">Advocacy for practical, human-centric AI
                             adoption across enterprises.
                         </p>
-                         <a href="https://www.ceoinsightsindia.com/leader/dr-biswajit-rath-humanizing-technology-transforming-business-cid-10045.html"
+                        <a href="https://www.ceoinsightsindia.com/leader/dr-biswajit-rath-humanizing-technology-transforming-business-cid-10045.html"
                             target="_blank" rel="noopener noreferrer"
                             class="text-white text-decoration small btnpress media-btn">
                             Read Articles
@@ -542,8 +593,7 @@
                         <h5 class="fw-bold mb-3">The Future of Work with AI</h5>
                         <p class="text-secondary small">Interview discussing how AI shapes modern workplace dynamics.
                         </p>
-                        <a href="https://www.youtube.com/watch?v=vDQoFe56qIs"
-                            target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.youtube.com/watch?v=vDQoFe56qIs" target="_blank" rel="noopener noreferrer"
                             class="text-white text-decoration small btnpress media-btn">
                             Listen Now
                         </a>
