@@ -454,6 +454,17 @@ section {
     padding: 1rem 2rem;
     border-radius: 50px;
 }
+.text-secondary-2{
+    margin-top: 20px;
+}
+
+
+.text-secondary-3 {
+margin-top: 20px;
+}
+.h3 {
+    margin-top: 2px;
+}
 
 .btn-outline-light:hover {
     background-color: #fff;
@@ -461,6 +472,34 @@ section {
     border-color: #fff;
     box-shadow: rgba(255, 255, 255, 0.3);
 }
+
+
+@media (max-width: 768px) {
+    .btn-primary,
+    .btn-outline-light {
+        width: 200px;
+        display: block;        /* IMPORTANT */
+        margin: 10px auto;     /* center */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-primary,
+    .btn-outline-light {
+        width: 200px;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .text-secondary-3{
+        margin-top: 35px;
+    }
+    
+}
+
+
+
 
 /* Marquee */
 .marquee-section {
