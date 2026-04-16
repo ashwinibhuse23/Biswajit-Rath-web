@@ -48,7 +48,7 @@
                     <li class="nav-item"><a class="nav-link btnpress" href="publications.html">Books & Publications</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link  btnpress" href="services.html" id="servicesDropdown">
+                        <a class="nav-link dropdown-toggle btnpress" href="services.html" id="servicesDropdown">
                             Services
                         </a>
 
@@ -99,40 +99,93 @@
             </div>
         </div>
     </nav>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+        const linkPath = link.getAttribute("href");
+
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+
+});
+</script>
+     <script>
+   document.addEventListener("DOMContentLoaded", function () {
 
     const dropdownToggle = document.querySelector("#servicesDropdown");
 
     if (dropdownToggle) {
+
         let clickCount = 0;
 
         dropdownToggle.addEventListener("click", function (e) {
 
             if (window.innerWidth < 992) {
-                clickCount++;
 
                 const parent = this.parentElement;
                 const menu = this.nextElementSibling;
 
+                clickCount++;
+
                 if (clickCount === 1) {
-                    e.preventDefault(); // first click → open dropdown
+                    // 👉 First click → open dropdown
+                    e.preventDefault();
                     parent.classList.add("show");
                     menu.classList.add("show");
+
+                } else if (clickCount === 2) {
+                    // 👉 Second click → close dropdown
+                    e.preventDefault();
+                    parent.classList.remove("show");
+                    menu.classList.remove("show");
+
                 } else {
-                    // second click → allow redirect
-                    clickCount = 0;
+                    // 👉 Third click → redirect
                     window.location.href = this.getAttribute("href");
+                    clickCount = 0;
                 }
             }
+        });
 
+        // 👉 Outside click → reset everything
+        document.addEventListener("click", function (e) {
+            const parent = dropdownToggle.parentElement;
+            const menu = dropdownToggle.nextElementSibling;
+
+            if (!parent.contains(e.target)) {
+                parent.classList.remove("show");
+                menu.classList.remove("show");
+                clickCount = 0;
+            }
         });
     }
+});</script>
 
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdownToggle = document.querySelector("#servicesDropdown");
+
+    function handleResize() {
+        if (window.innerWidth < 992) {
+            dropdownToggle.classList.add("dropdown-toggle");
+        } else {
+            dropdownToggle.classList.remove("dropdown-toggle");
+        }
+    }
+
+    handleResize(); // first run
+    window.addEventListener("resize", handleResize);
 });
-    </script>
-
+   </script>
 
   <!-- ABOUT HERO SECTION -->
   <section class="about-hero">
@@ -617,6 +670,25 @@ document.querySelector('.cta-btn').addEventListener('click', function(e) {
       </ul>
     </div>
   </section>
+
+  <script>
+  const radios = document.querySelectorAll('input[name="gallery-item"]');
+  let currentIndex = 0;
+
+  function autoRotate() {
+    // next index
+    currentIndex++;
+
+    if (currentIndex >= radios.length) {
+      currentIndex = 0; // loop back
+    }
+
+    radios[currentIndex].checked = true;
+  }
+
+  // every 5 sec
+  setInterval(autoRotate, 5000);
+</script>
 
 
   <!-- Footer -->

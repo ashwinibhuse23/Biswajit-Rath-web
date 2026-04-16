@@ -235,6 +235,8 @@ section {
     width: 100%;
   }
 
+  
+
   /* Dropdown items spacing */
   .dropdown-item {
     padding: 8px 0;
@@ -372,6 +374,27 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
+      overflow: hidden;
+}
+
+
+  /* PARTICLES BACKGROUND */
+#particles-js {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+     opacity: 0.5;              /* 🔥 MAIN CONTROL (adjust 0.2–0.4) */
+    filter: blur(1px);
+}
+
+/* CONTENT वर ठेवण्यासाठी */
+.hero-text,
+.hero-visual {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-subhead {
@@ -980,6 +1003,200 @@ footer .company-name {
 
 
 
+
+
+
+/* BACKDROP */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+}
+
+/* CENTER ALIGN */
+.modal-box {
+    width: 420px;
+    max-width: 92%;
+    margin: 6% auto;
+    padding: 28px 26px;
+
+    background: linear-gradient(145deg, #0a0a0a, #0f0f0f);
+    border-radius: 18px;
+
+    border: 1px solid rgba(163,255,60,0.25);
+    box-shadow: 
+        0 0 20px rgba(163,255,60,0.15),
+        inset 0 0 10px rgba(163,255,60,0.05);
+
+    position: relative;
+}
+
+/* HEADER */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+
+
+/* CLOSE BUTTON */
+.close-btn {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    line-height: 1;
+
+    color: #aaa;
+    cursor: pointer;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+
+    background: transparent;
+
+    transition: all 0.3s ease;
+}
+.close-btn:hover {
+    color: #b7ff3c;
+    border-color: #b7ff3c;
+    box-shadow: 0 0 10px rgba(183,255,60,0.6);
+    transform: scale(1.1);
+}
+
+
+/* INPUT GROUP SPACING */
+.input-group {
+    margin-bottom: 14px;
+}
+
+/* INPUT STYLE */
+input, select, textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border-radius: 10px;
+    border: 1px solid #1f1f1f;
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.25s;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+    color: #777;
+}
+
+/* FOCUS EFFECT */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #b7ff3c;
+    box-shadow: 0 0 8px rgba(183,255,60,0.4);
+}
+
+/* SELECT ARROW FIX */
+select {
+    appearance: none;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: none;
+}
+
+/* SUCCESS MESSAGE */
+#successMsg {
+    display: none;
+    color: #b7ff3c;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+
+    background: #b7ff3c;
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #a3e635;
+    transform: translateY(-1px);
+}
+
+
+
+/* MOBILE (≤768px) */
+@media (max-width: 768px) {
+
+    .modal-box {
+        width: 95%;
+        margin: 12% auto;
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    .modal-header {
+        margin-bottom: 14px;
+    }
+
+    input, select, textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .close-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+}
+
+
+/* SMALL MOBILE (≤480px) */
+@media (max-width: 480px) {
+
+    .modal-box {
+        width: 94%;
+        margin: 18% auto;
+        padding: 18px 16px;
+    }
+
+    input, select, textarea {
+        font-size: 12px;
+        padding: 11px;
+    }
+
+    .submit-btn {
+        font-size: 13px;
+    }
+}
 
 
 

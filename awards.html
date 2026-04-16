@@ -106,38 +106,57 @@
         </div>
     </nav>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      <script>
+   document.addEventListener("DOMContentLoaded", function () {
 
     const dropdownToggle = document.querySelector("#servicesDropdown");
 
     if (dropdownToggle) {
+
         let clickCount = 0;
 
         dropdownToggle.addEventListener("click", function (e) {
 
             if (window.innerWidth < 992) {
-                clickCount++;
 
                 const parent = this.parentElement;
                 const menu = this.nextElementSibling;
 
+                clickCount++;
+
                 if (clickCount === 1) {
-                    e.preventDefault(); // first click → open dropdown
+                    // 👉 First click → open dropdown
+                    e.preventDefault();
                     parent.classList.add("show");
                     menu.classList.add("show");
+
+                } else if (clickCount === 2) {
+                    // 👉 Second click → close dropdown
+                    e.preventDefault();
+                    parent.classList.remove("show");
+                    menu.classList.remove("show");
+
                 } else {
-                    // second click → allow redirect
-                    clickCount = 0;
+                    // 👉 Third click → redirect
                     window.location.href = this.getAttribute("href");
+                    clickCount = 0;
                 }
             }
+        });
 
+        // 👉 Outside click → reset everything
+        document.addEventListener("click", function (e) {
+            const parent = dropdownToggle.parentElement;
+            const menu = dropdownToggle.nextElementSibling;
+
+            if (!parent.contains(e.target)) {
+                parent.classList.remove("show");
+                menu.classList.remove("show");
+                clickCount = 0;
+            }
         });
     }
-
-});
-    </script>
+});</script>
     <section class="breadcrumb-section page-title bg-shape-circles">
         <div class="container">
             <div class="row">

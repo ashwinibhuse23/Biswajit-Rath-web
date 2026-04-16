@@ -42,12 +42,12 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center gap-4">
-          <li class="nav-item"><a class="nav-link active btnpress" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link  btnpress" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link btnpress" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link btnpress" href="publications.html">Books & Publications</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link  btnpress" href="#" id="servicesDropdown">
+            <a class="nav-link dropdown-toggle btnpress" href="services.html" id="servicesDropdown">
               Services
             </a>
 
@@ -127,38 +127,92 @@
     });
   </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+   
+
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
 
     const dropdownToggle = document.querySelector("#servicesDropdown");
 
     if (dropdownToggle) {
-        let clickCount = 0;
+
+        let isOpen = false;
 
         dropdownToggle.addEventListener("click", function (e) {
 
             if (window.innerWidth < 992) {
-                clickCount++;
 
                 const parent = this.parentElement;
                 const menu = this.nextElementSibling;
 
-                if (clickCount === 1) {
-                    e.preventDefault(); // first click → open dropdown
+                if (!isOpen) {
+                    // 👉 First click → open dropdown
+                    e.preventDefault();
                     parent.classList.add("show");
                     menu.classList.add("show");
+                    isOpen = true;
                 } else {
-                    // second click → allow redirect
-                    clickCount = 0;
+                    // 👉 Second click → redirect
+                    isOpen = false;
                     window.location.href = this.getAttribute("href");
                 }
             }
+        });
 
+        // 👉 Outside click → close
+        document.addEventListener("click", function (e) {
+            const parent = dropdownToggle.parentElement;
+            const menu = dropdownToggle.nextElementSibling;
+
+            if (!parent.contains(e.target)) {
+                parent.classList.remove("show");
+                menu.classList.remove("show");
+                isOpen = false;
+            }
         });
     }
 
 });
-    </script>
+   </script>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdownToggle = document.querySelector("#servicesDropdown");
+
+    function handleResize() {
+        if (window.innerWidth < 992) {
+            dropdownToggle.classList.add("dropdown-toggle");
+        } else {
+            dropdownToggle.classList.remove("dropdown-toggle");
+        }
+    }
+
+    handleResize(); // first run
+    window.addEventListener("resize", handleResize);
+});
+   </script>
+
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop();
+
+    links.forEach(link => {
+        const linkPath = link.getAttribute("href");
+
+        if (linkPath === currentPath) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+
+});
+</script>
 
   <!-- HERO STYLE SERVICES HEADER -->
   <section class="services-hero-wrapper">
