@@ -386,11 +386,11 @@ section {
     height: 100%;
     z-index: 0;
 
-     opacity: 0.5;              /* 🔥 MAIN CONTROL (adjust 0.2–0.4) */
-    filter: blur(1px);
+     opacity: 0.7;              
+
 }
 
-/* CONTENT वर ठेवण्यासाठी */
+
 .hero-text,
 .hero-visual {
     position: relative;
