@@ -113,7 +113,7 @@ section {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('../assets/images/aboutimg.jpeg') no-repeat;
+  background: url('../assets/images/aboutimg.png') no-repeat;
 
   background-size: cover;
   background-position: top -50px center;
