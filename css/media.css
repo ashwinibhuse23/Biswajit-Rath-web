@@ -443,7 +443,7 @@ section {
   padding: 3px; /* border thickness */
   background: linear-gradient(270deg, #000000, #bff747, #000000);
   background-size: 400% 400%;
-  animation: borderMove 6s linear infinite;
+  animation: borderMove 15s linear infinite;
 }
 
 /* INNER CONTAINER (important) */
