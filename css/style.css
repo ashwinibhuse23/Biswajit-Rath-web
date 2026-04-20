@@ -132,14 +132,8 @@ section {
     will-change: auto;
 }
 
-body {
-    padding-top: 90px !important; 
-}
 
-html, body {
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-}
+
 
 /* Toggle button */
 .navbar-toggler {
@@ -353,7 +347,7 @@ html, body {
 /* Hero Section */
 .hero-section {
     padding-top: 100px;
-  min-height:calc(100vh - 90px);
+  min-height:100vh;
     display: flex;
     align-items: center;
       overflow: hidden;
@@ -505,6 +499,10 @@ margin-top: 20px;
     }
     .text-secondary-3{
         margin-top: 35px;
+    }
+
+    .hero-intro-text{
+        margin-top: 50px;
     }
     
 }
