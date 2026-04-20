@@ -29,16 +29,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Navbar Scroll Effect
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementsByClassName("navbar")[0].style.top = "0px";
-        } else {
-            document.getElementsByClassName("navbar")[0].style.top = "-100px";
-        }
-        prevScrollpos = currentScrollPos;
-    };
+    // var prevScrollpos = window.pageYOffset;
+    // window.onscroll = function () {
+    //     var currentScrollPos = window.pageYOffset;
+    //     if (prevScrollpos > currentScrollPos) {
+    //         document.getElementsByClassName("navbar")[0].style.top = "0px";
+    //     } else {
+    //         document.getElementsByClassName("navbar")[0].style.top = "-100px";
+    //     }
+    //     prevScrollpos = currentScrollPos;
+    // };
     // Hero Animations
     const heroTimeline = gsap.timeline();
 

@@ -1713,10 +1713,10 @@ overflow: hidden;
 /* IMAGE WRAPPER */
 .media-image .img-border {
   position: relative;
-  width: 110%;
-  margin-left: -50px;
-
-  padding: 4px; /* slightly thicker for visibility */
+  width: 100%;              /* FIX */
+  margin: 0 auto;           /* CENTER */
+  
+  padding: 4px;
   border-radius: 18px;
 
   background: linear-gradient(270deg, #000000, #bff747, #000000);
@@ -1816,8 +1816,14 @@ overflow: hidden;
     font-weight: 700;
   }
 
-  .media-image img{
-    margin-left: -10px;
+   .media-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .media-image .img-border {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .feature-list{

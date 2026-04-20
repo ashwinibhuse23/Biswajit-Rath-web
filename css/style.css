@@ -114,17 +114,31 @@ section {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
-    z-index: 9999; 
-    background: rgba(6, 6, 6, 0.85);
+    z-index: 9999 !important;
+
+    background: rgba(6, 6, 6, 0.9);
+
+    /* Safari support */
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+
     padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-     transform: translateY(0) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    /* 🔥 IMPORTANT FIX */
+    transform: none !important;
+    will-change: auto;
 }
 
 body {
-    padding-top: 80px; 
+    padding-top: 90px !important; 
+}
+
+html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Toggle button */
@@ -339,10 +353,16 @@ body {
 /* Hero Section */
 .hero-section {
     padding-top: 100px;
-    min-height: 100vh;
+  min-height:calc(100vh - 90px);
     display: flex;
     align-items: center;
       overflow: hidden;
+
+       margin-top:0 !important;
+    padding-top:40px !important;
+}
+section:first-of-type{
+   padding-top:40px;
 }
 
 
