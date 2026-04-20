@@ -131,6 +131,7 @@ section {
     filter: invert(1);
 }
 
+
 /* Nav links */
 .nav-link {
     font-weight: 500;
@@ -233,6 +234,25 @@ section {
   .dropdown-toggle {
     text-align: center;
     width: 100%;
+  }
+
+
+   .navbar-collapse {
+    background: #000; /* or your bg */
+    padding: 20px;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+  }
+
+  .dropdown-menu {
+    background: transparent;
+    border: none;
+  }
+
+  .dropdown-item {
+    color: #fff;
   }
 
   

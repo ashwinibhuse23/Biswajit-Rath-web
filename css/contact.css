@@ -756,3 +756,32 @@ select:focus-visible {
 
 
 
+
+
+
+/* Fix toggler visibility */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Mobile menu full width + spacing */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #000; /* or your bg */
+    padding: 20px;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+  }
+
+  .dropdown-menu {
+    background: transparent;
+    border: none;
+  }
+
+  .dropdown-item {
+    color: #fff;
+  }
+}
