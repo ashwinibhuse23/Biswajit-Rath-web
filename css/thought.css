@@ -525,11 +525,16 @@ position: relative;
 /* tablets */
 @media (max-width: 992px) {
   .section-title {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .blog-img img {
     height: 200px;
+  }
+
+  .hero-content h1{
+    font-size: 40px;
+     letter-spacing: -0.5px;
   }
 }
 
