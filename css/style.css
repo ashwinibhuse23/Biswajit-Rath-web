@@ -234,16 +234,8 @@ section {
   }
 
   /* Services center */
-  .dropdown-toggle {
-    text-align: center;
-    width: 100%;
-  }
-
-  /* Dropdown items spacing */
-  .dropdown-item {
-    padding: 8px 0;
-    font-size: 0.9rem;
-  }
+  
+  
 
   /* Contact button center */
   .btn-contact {
@@ -251,30 +243,9 @@ section {
     margin-top: 10px;
   }
 
- .dropdown-menu {
+
+
    
-    position: static;   /* mobile मध्ये absolute नको */
-    display: none;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-
-    background: transparent;
-    border: none;
-    padding-left: 10px;
-  }
-
-  .dropdown-menu.show {
-    display: block;
-    
-  opacity: 1;
-  visibility: visible;
-  }
-
-   .dropdown.show .dropdown-toggle::after {
-    transform: rotate(180deg);
-  }
-
    .navbar-collapse {
     max-height: 80vh;
     overflow-y: auto;
@@ -330,13 +301,7 @@ section {
 
 
 
-.dropdown-toggle::after {
-  transition: transform 0.3s ease;
-}
 
-.dropdown:hover .dropdown-toggle::after {
-  transform: rotate(180deg);
-}
 
 
 
@@ -465,7 +430,7 @@ section:first-of-type{
 
 
 .text-secondary-3 {
-margin-top: 20px;
+margin-top: 30px;
 }
 .h3 {
     margin-top: 2px;
@@ -478,33 +443,66 @@ margin-top: 20px;
     box-shadow: rgba(255, 255, 255, 0.3);
 }
 
+.hero-ctas a {
+    display: inline-block;
+    white-space: nowrap; /* text break honar nahi */
+}
 
+/* Tablet */
 @media (max-width: 768px) {
+    .hero-ctas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.hero-ctas .btn {
+        max-width: 260px;
+        font-size: 0.85rem;
+        padding: 0.75rem 1.3rem;
+    }
     .btn-primary,
     .btn-outline-light {
-        width: 200px;
-        display: block;        /* IMPORTANT */
-        margin: 10px auto;     /* center */
+        width: 100%;
+        max-width: 280px;
+        margin: 8px 0;
         text-align: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
-    .btn-primary,
-    .btn-outline-light {
-        width: 200px;
-        display: block;
-        margin: 10px auto;
-        text-align: center;
-    }
-    .text-secondary-3{
-        margin-top: 35px;
+   .hero-ctas {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    .hero-intro-text{
-        margin-top: 50px;
+    .hero-ctas .btn {
+        width: 100%;
+        max-width: 220px;   /* 👈 perfect for iPhone */
+        padding: 0.65rem 1rem; /* 👈 reduce height */
+        font-size: 0.75rem;    /* 👈 small but readable */
+        border-radius: 40px;
     }
-    
+
+    .btn-primary,
+    .btn-outline-light {
+        width: 100%;
+        max-width: 240px;
+        margin: 8px 0;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-intro-text {
+        margin-top: 40px;
+    }
+
+    .text-secondary-3 {
+margin-top: 37px;
+}
 }
 
 
@@ -894,7 +892,8 @@ footer .company-name {
 
     .hero-ctas {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        font-size: 10px;
     }
 
     .hero-image-wrapper {

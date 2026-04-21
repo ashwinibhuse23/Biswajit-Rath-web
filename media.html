@@ -34,42 +34,42 @@
           <li class="nav-item"><a class="nav-link btnpress" href="publication.html">Books & Publications</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle btnpress" href="services.html" id="servicesDropdown">
+            <a class="nav-link  btnpress" href="services.html" id="servicesDropdown">
               Services
             </a>
 
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="#board">
+                <a class="dropdown-item" href="services.html#board">
                   Board & Advisory Roles
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="#Ai">
+                <a class="dropdown-item" href="services.html#Ai">
                   AI Strategy & Transformation Advisor
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#coaching">
+                <a class="dropdown-item" href="services.html#coaching">
                   Executive Coaching & Mentoring
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#academic">
+                <a class="dropdown-item" href="services.html#academic">
                   Academic & Institutional Engagements
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#workshops">
+                <a class="dropdown-item" href="services.html#workshops">
                   Speaking Engagements & Workshops
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#startup">
+                <a class="dropdown-item" href="services.html#startup">
                   Startup Mentorship
                 </a>
               </li>
@@ -86,75 +86,8 @@
     </div>
   </nav>
 
-     <script>
-   document.addEventListener("DOMContentLoaded", function () {
-
-    const dropdownToggle = document.querySelector("#servicesDropdown");
-
-    if (dropdownToggle) {
-
-        let clickCount = 0;
-
-        dropdownToggle.addEventListener("click", function (e) {
-
-            if (window.innerWidth < 992) {
-
-                const parent = this.parentElement;
-                const menu = this.nextElementSibling;
-
-                clickCount++;
-
-                if (clickCount === 1) {
-                    // 👉 First click → open dropdown
-                    e.preventDefault();
-                    parent.classList.add("show");
-                    menu.classList.add("show");
-
-                } else if (clickCount === 2) {
-                    // 👉 Second click → close dropdown
-                    e.preventDefault();
-                    parent.classList.remove("show");
-                    menu.classList.remove("show");
-
-                } else {
-                    // 👉 Third click → redirect
-                    window.location.href = this.getAttribute("href");
-                    clickCount = 0;
-                }
-            }
-        });
-
-        // 👉 Outside click → reset everything
-        document.addEventListener("click", function (e) {
-            const parent = dropdownToggle.parentElement;
-            const menu = dropdownToggle.nextElementSibling;
-
-            if (!parent.contains(e.target)) {
-                parent.classList.remove("show");
-                menu.classList.remove("show");
-                clickCount = 0;
-            }
-        });
-    }
-});</script>
-
-   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-    const dropdownToggle = document.querySelector("#servicesDropdown");
-
-    function handleResize() {
-        if (window.innerWidth < 992) {
-            dropdownToggle.classList.add("dropdown-toggle");
-        } else {
-            dropdownToggle.classList.remove("dropdown-toggle");
-        }
-    }
-
-    handleResize(); // first run
-    window.addEventListener("resize", handleResize);
-});
-   </script>
+    
+   
 
    <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -551,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="content">
         <span class="tag">Publications & Authoring</span>
 
-        <h2>Sharing insights to drive awareness and action</h2>v
+        <h2>Sharing insights to drive awareness and action</h2>
 
         <p class="quote">
           A perspective on the evolving role of AI and the need for human-centered thinking in its adoption

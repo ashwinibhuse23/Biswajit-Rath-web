@@ -572,7 +572,9 @@ position: relative;
     object-fit: contain;
   }
 
-
+.blog-card:nth-child(4) .blog-img img {
+  object-fit: cover;
+}
   .row {
     justify-content: center;
   }

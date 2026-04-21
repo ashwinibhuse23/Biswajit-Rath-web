@@ -46,42 +46,42 @@
           <li class="nav-item"><a class="nav-link btnpress" href="publication.html">Books & Publications</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle btnpress" href="services.html" id="servicesDropdown">
+            <a class="nav-link  btnpress" href="services.html" id="servicesDropdown">
               Services
             </a>
 
             <ul class="dropdown-menu">
               <li>
-                <a class="dropdown-item" href="#board">
+                <a class="dropdown-item" href="services.html#board">
                   Board & Advisory Roles
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="#Ai">
+                <a class="dropdown-item" href="services.html#Ai">
                   AI Strategy & Transformation Advisor
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#coaching">
+                <a class="dropdown-item" href="services.html#coaching">
                   Executive Coaching & Mentoring
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#academic">
+                <a class="dropdown-item" href="services.html#academic">
                   Academic & Institutional Engagements
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#workshops">
+                <a class="dropdown-item" href="services.html#workshops">
                   Speaking Engagements & Workshops
                 </a>
               </li>
 
               <li>
-                <a class="dropdown-item" href="#startup">
+                <a class="dropdown-item" href="services.html#startup">
                   Startup Mentorship
                 </a>
               </li>
@@ -98,76 +98,11 @@
     </div>
   </nav>
 
-     <script>
-   document.addEventListener("DOMContentLoaded", function () {
-
-    const dropdownToggle = document.querySelector("#servicesDropdown");
-
-    if (dropdownToggle) {
-
-        let clickCount = 0;
-
-        dropdownToggle.addEventListener("click", function (e) {
-
-            if (window.innerWidth < 992) {
-
-                const parent = this.parentElement;
-                const menu = this.nextElementSibling;
-
-                clickCount++;
-
-                if (clickCount === 1) {
-                    // 👉 First click → open dropdown
-                    e.preventDefault();
-                    parent.classList.add("show");
-                    menu.classList.add("show");
-
-                } else if (clickCount === 2) {
-                    // 👉 Second click → close dropdown
-                    e.preventDefault();
-                    parent.classList.remove("show");
-                    menu.classList.remove("show");
-
-                } else {
-                    // 👉 Third click → redirect
-                    window.location.href = this.getAttribute("href");
-                    clickCount = 0;
-                }
-            }
-        });
-
-        // 👉 Outside click → reset everything
-        document.addEventListener("click", function (e) {
-            const parent = dropdownToggle.parentElement;
-            const menu = dropdownToggle.nextElementSibling;
-
-            if (!parent.contains(e.target)) {
-                parent.classList.remove("show");
-                menu.classList.remove("show");
-                clickCount = 0;
-            }
-        });
-    }
-});</script>
-
-   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-    const dropdownToggle = document.querySelector("#servicesDropdown");
-
-    function handleResize() {
-        if (window.innerWidth < 992) {
-            dropdownToggle.classList.add("dropdown-toggle");
-        } else {
-            dropdownToggle.classList.remove("dropdown-toggle");
-        }
-    }
-
-    handleResize(); // first run
-    window.addEventListener("resize", handleResize);
-});
-   </script>
-
+   <style>
+   html {
+  scroll-behavior: smooth;
+}</style>
+  
    <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -724,15 +659,24 @@ document.addEventListener("DOMContentLoaded", function () {
                     </p>
 
                     <ul class="list-unstyled mb-4 text-white">
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> From static expertise to
-                            Curiosity Quotient (CQ)-driven growth</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Mastering structured
-                            inquiry in an algorithmic world</li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Reclaiming human judgment
+                       <div class="d-flex"> <span><i class="fas fa-check-circle text-primary me-2"></i></span>
+                        <li class="mb-2"> From static expertise to
+                            Curiosity Quotient (CQ)-driven growth</li></div>
+
+                           <div class="d-flex"> <span><i class="fas fa-check-circle text-primary me-2"></i></span>
+                        <li class="mb-2"> Mastering structured
+                            inquiry in an algorithmic world</li></div>
+
+                            <div class="d-flex"> <span><i class="fas fa-check-circle text-primary me-2"></i></span>
+                            <li class="mb-2"> Reclaiming human judgment
                             in the age of AI certainty
-                        </li>
-                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Governing AI with
-                            responsibility, not just capability</li>
+                        </li></div>
+                       
+                            <div class="d-flex">
+                                 <span><i class="fas fa-check-circle text-primary me-2"></i></span>
+                        <li class="mb-2"> Governing AI with
+                            responsibility, not just capability</li></div>
+                     
                     </ul>
 
                     <div class="d-flex gap-3 hero-ctas">
