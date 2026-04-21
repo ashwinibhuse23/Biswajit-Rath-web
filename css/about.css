@@ -1676,6 +1676,7 @@ select {
     opacity: var(--info-opacity,0);
     /*translate: 0 var( --info-offset-y);*/
     transition: var(--duration) ease-in-out var(--info-delay,0ms);
+    
   }
 
   /* update custom properties for checked item */
@@ -1756,9 +1757,50 @@ select {
 .timeline-heading p {
   color: rgba(255,255,255,0.7);
   margin-top: 10px;
+
+
 }
 
 /* TIMELINE */
 .cards-container {
   position: relative; /* ❗ not absolute / fixed */
+}
+
+
+
+/* ===== EXTRA SMALL DEVICES (phones < 480px) ===== */
+@media (max-width: 480px) {
+  .timeline-heading {
+    padding: 0 12px;
+  }
+
+  .timeline-heading h2 {
+    font-size: 20px;
+  }
+
+  .timeline-heading p {
+    font-size: 13px;
+  }
+}
+
+/* ===== SMALL DEVICES (phones 480px - 768px) ===== */
+@media (max-width: 768px) {
+  .timeline-heading h2 {
+    font-size: 24px;
+  }
+
+  .timeline-heading p {
+    font-size: 14px;
+  }
+}
+
+/* ===== TABLETS (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+  .timeline-heading h2 {
+    font-size: 30px;
+  }
+
+  .timeline-heading p {
+    font-size: 15px;
+  }
 }
