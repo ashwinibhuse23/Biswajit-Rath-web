@@ -300,7 +300,131 @@ section {
 }
 
 
+/* ===============================
+   1920 x 1200 SCREEN PERFECT
+=================================*/
+@media(min-width:1600px){
 
+    .navbar{
+        padding: 26px 0;
+    }
+
+    .navbar .container-fluid{
+        padding-left: 58px !important;  
+        padding-right: 70px !important;
+    }
+
+    .navbar-nav{
+        gap: 50px !important;
+    }
+
+    .nav-link{
+        font-size: 17px;
+    }
+
+    .btn-contact{
+        padding: 14px 38px;
+        font-size: 16px;
+    }
+
+    .navbar .container-fluid{
+        padding-left: 58px !important;
+        padding-right: 70px !important;
+    }
+
+    /* Hero section main container */
+    .hero-section .container,
+    .hero-section .container-fluid,
+    .hero-content,
+    .hero-text,
+    .banner-content{
+        padding-left: 58px !important;
+        margin-left: 0 !important;
+    }
+}
+/* ===============================
+   Laptop
+=================================*/
+@media(max-width:1399px){
+
+    .navbar-nav{
+        gap: 28px !important;
+    }
+
+    .nav-link{
+        font-size: 14px;
+    }
+
+    .btn-contact{
+        padding: 10px 28px;
+    }
+}
+
+/* ===============================
+   Tablet / Mobile
+=================================*/
+@media(max-width:991px){
+
+    .navbar{
+        padding: 16px 0;
+    }
+
+    .navbar .container-fluid{
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .navbar-collapse{
+        background: #080808;
+        margin-top: 18px;
+        padding: 24px;
+        border-radius: 18px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .navbar-nav{
+        gap: 18px !important;
+        align-items: center;
+    }
+
+    .nav-link{
+        font-size: 16px;
+        padding: 8px 0 !important;
+    }
+
+    .btn-contact{
+        margin-top: 8px;
+        width: 210px;
+        text-align: center;
+    }
+
+    .dropdown-menu{
+        position: static !important;
+        width: 100%;
+        margin-top: 10px;
+        background: #111;
+    }
+}
+
+/* ===============================
+   Small Mobile
+=================================*/
+@media(max-width:576px){
+
+    .navbar .container-fluid{
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .nav-link{
+        font-size: 15px;
+    }
+
+    .btn-contact{
+        width: 100%;
+    }
+}
 
 
 
@@ -504,7 +628,37 @@ margin-top: 30px;
 margin-top: 37px;
 }
 }
+.hero-image-wrapper{
+    position: relative;
+    display: inline-block;
+}
 
+.social-iconbx{
+    position: absolute;
+    bottom: 80px;     /* image च्या खाली जवळ */
+    right: 50px;      /* image च्या उजवीकडे */
+    z-index: 5;
+}
+
+.social-icon{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid #bff747;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icon:hover{
+    background: #bff747;
+    color: #000;
+}
 
 
 
@@ -1185,4 +1339,68 @@ textarea {
 
 
 
+/* ADD THIS AT LAST OF CSS */
 
+/* DESKTOP / LARGE SCREEN FIX */
+@media screen and (min-width:1200px){
+
+     .modal{
+        display:none;              /* normal hidden state */
+        position:fixed;
+        inset:0;
+
+        justify-content:center;
+        align-items:center;
+
+        padding:20px;
+    }
+
+    /* JS open karto tevha */
+    .modal[style*="block"]{
+        display:flex !important;
+    }
+
+    .modal-box{
+        width:440px !important;
+        max-width:440px !important;
+
+        margin:0 auto !important;     /* center */
+        margin-top:40px !important;      /* remove 80px */
+        
+        position:relative;
+        left:auto !important;
+        right:auto !important;
+        top:auto !important;
+        transform:none !important;
+
+        padding:22px 24px !important;
+    }
+
+    .modal-header{
+        margin-bottom:16px !important;
+    }
+
+    .modal-header h2{
+        font-size:30px !important;
+        line-height:1.1 !important;
+    }
+
+    .input-group{
+        margin-bottom:12px !important;
+    }
+
+    input,
+    textarea{
+        padding:12px 14px !important;
+        font-size:14px !important;
+    }
+
+    textarea{
+        min-height:90px !important;
+    }
+
+    .submit-btn{
+        padding:13px !important;
+        font-size:15px !important;
+    }
+}

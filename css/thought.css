@@ -589,3 +589,140 @@ position: relative;
     margin: 0 auto;
   }
 }
+
+/* ===============================
+   FINAL IMAGE + SPACING FIX
+   =============================== */
+
+@media (min-width:1200px){
+
+  .blog-card{
+    max-width:390px;
+    min-height:430px;
+    margin:auto;
+  }
+
+  /* image section */
+  .blog-img{
+    height:185px;
+    overflow:hidden;
+    background:#111;
+  }
+
+  .blog-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+  }
+
+  /* 2nd image proper visible */
+  .blog-section .col-lg-4:nth-child(2) .blog-img img{
+    object-fit:cover;
+    object-position:center center;
+    transform:scale(1.12);
+  }
+
+  /* 5th image proper visible */
+  .blog-section .col-lg-4:nth-child(5) .blog-img img{
+    object-fit:cover;
+    object-position:center top;
+    transform:scale(1.18);
+  }
+
+  /* content area */
+  .blog-content{
+    padding:15px 18px;
+  }
+
+  /* heading */
+  .blog-content h3{
+    font-size:16px;
+    line-height:1.32;
+    min-height:58px;
+    margin-bottom:8px;   /* reduced gap */
+  }
+
+  /* paragraph */
+  .blog-content p{
+    font-size:13px;
+    line-height:1.45;
+    min-height:48px;
+    margin-top:0;
+    margin-bottom:12px;  /* reduced gap */
+  }
+
+  /* button */
+  .blog-btn{
+    margin-top:30px;
+    padding:8px 18px;
+    font-size:11px;
+  }
+}
+
+/* laptop */
+@media (max-width:1199px){
+
+  .blog-img{
+    height:170px;
+  }
+
+  .blog-section .col-lg-4:nth-child(2) .blog-img img{
+    transform:scale(1.08);
+  }
+
+  .blog-section .col-lg-4:nth-child(5) .blog-img img{
+    transform:scale(1.12);
+  }
+}
+
+/* tablet */
+@media (max-width:992px){
+
+  .blog-card{
+    min-height:auto;
+  }
+
+  .blog-img{
+    height:210px;
+  }
+
+  .blog-content h3,
+  .blog-content p{
+    min-height:auto;
+  }
+}
+
+/* mobile */
+@media (max-width:576px){
+
+  .blog-card{
+    max-width:330px;
+  }
+
+  .blog-img{
+    height:180px;
+  }
+
+  .blog-content{
+    padding:14px;
+  }
+
+  .blog-content h3{
+    font-size:15px;
+    margin-bottom:8px;
+  }
+
+  .blog-content p{
+    font-size:13px;
+    margin-bottom:10px;
+  }
+
+  .blog-section .col-md-6:nth-child(2) .blog-img img{
+    transform:scale(1.10);
+  }
+
+  .blog-section .col-md-6:nth-child(5) .blog-img img{
+    transform:scale(1.14);
+  }
+}

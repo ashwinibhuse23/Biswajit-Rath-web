@@ -105,54 +105,9 @@ section {
 }
 
 
-/* Navbar base */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030;
-    background: rgba(6, 6, 6, 0.7);
-    backdrop-filter: blur(10px);
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
 
-/* Toggle button */
-.navbar-toggler {
-    border: none;
-    outline: none;
-}
 
-.navbar-toggler-icon {
-    filter: invert(1);
-}
 
-/* Nav links */
-.nav-link {
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.6) !important;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: #bff747 !important;
-}
-
-/* Contact button */
-.btn-contact {
-    border: 2px solid #bff747;
-    color: #bff747;
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-}
-
-.btn-contact:hover {
-    background: #bff747;
-    color: #000;
-}
 
 /* Dropdown base */
 /* RESET dropdown properly */
@@ -1008,7 +963,156 @@ section {
 }
 
 
+/* =====================================================
+FINAL POLISHED VERSION
+Smaller cards + Learn More left + proper spacing + responsive
+===================================================== */
 
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+
+  .services-grid-section{
+    padding: 80px 0 !important;
+  }
+
+  .services-grid-section .container{
+    max-width: 1080px !important;
+  }
+
+  /* heading */
+  .services-heading h2{
+    font-size: 58px !important;
+    line-height: 1.05 !important;
+    margin-bottom: 48px !important;
+  }
+
+  .section-tag{
+    font-size: 15px !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* grid */
+  .services-grid{
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 26px !important;
+  }
+
+  /* cards */
+  .service-card-modern{
+    min-height: 270px !important;
+    padding: 22px 24px !important;
+    border-radius: 16px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* icon */
+  .icon-box{
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 17px !important;
+    margin-bottom: 16px !important;
+    border-radius: 12px !important;
+  }
+
+  /* title */
+  .service-card-modern h3{
+    font-size: 20px !important;
+    line-height: 1.15 !important;
+    min-height: 52px !important;
+    margin-bottom: 14px !important;
+    text-align: left !important;
+  }
+
+  /* paragraph */
+  .service-card-modern p{
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 18px !important;
+    flex-grow: 1 !important;
+    text-align: left !important;
+  }
+
+  /* button LEFT side */
+  .learn-more-btn{
+    margin-top: auto !important;
+    margin-left: 0 !important;
+    align-self: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    padding: 0 !important;
+  }
+}
+
+
+/* =========================
+TABLET RESPONSIVE
+========================= */
+@media screen and (max-width: 1199px) and (min-width: 768px){
+
+  .services-grid{
+    grid-template-columns: repeat(2,1fr) !important;
+    gap: 22px !important;
+  }
+
+  .service-card-modern{
+    min-height: 260px !important;
+    padding: 22px !important;
+  }
+
+  .services-heading h2{
+    font-size: 46px !important;
+  }
+}
+
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+@media screen and (max-width: 767px){
+
+  .services-grid{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .services-grid-section .container{
+    max-width: 100% !important;
+    padding: 0 18px !important;
+  }
+
+  .services-heading h2{
+    font-size: 34px !important;
+    margin-bottom: 35px !important;
+  }
+
+  .section-tag{
+    font-size: 13px !important;
+  }
+
+  .service-card-modern{
+    min-height: auto !important;
+    padding: 22px !important;
+  }
+
+  .service-card-modern h3{
+    font-size: 19px !important;
+    min-height: auto !important;
+  }
+
+  .service-card-modern p{
+    font-size: 13px !important;
+  }
+
+  .learn-more-btn{
+    font-size: 14px !important;
+  }
+}
 
 
 
@@ -1442,7 +1546,161 @@ section {
   }
 }
 
+/* ===================================
+   RESPONSIVE MEDIA QUERY (MORE COMPRESSED)
+   =================================== */
 
+/* Large Laptop / 150% Zoom */
+@media screen and (max-width:1600px) and (min-width:1200px){
+
+  .form-modal{
+    align-items:flex-start;
+    padding:35px 15px 15px;
+    overflow-y:auto;
+  }
+
+  .form-container{
+    max-width:380px;
+    padding:15px;
+    max-height:84vh;
+    margin-top: 60px;
+  }
+
+  .form-container h3{
+    font-size:20px;
+    margin-bottom:10px;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea{
+    padding:7px 10px;
+    margin-bottom:8px;
+    font-size:13px;
+  }
+
+  .form-container textarea{
+    min-height:80px;
+  }
+
+  .submit-btn{
+    padding:9px;
+    font-size:14px;
+  }
+}
+
+/* Laptop */
+@media screen and (max-width:1199px) and (min-width:992px){
+
+ .form-container{
+    max-width:380px;
+    padding:15px;
+    max-height:84vh;
+    margin-top: 110px;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width:991px) and (min-width:768px){
+
+  .form-modal{
+    align-items:flex-start;
+    padding:25px 15px;
+    overflow-y:auto;
+  }
+
+ .form-container{
+    max-width:380px;
+    padding:15px;
+    max-height:84vh;
+    margin-top: 60px;
+  }
+
+  .form-container h3{
+    font-size:20px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width:767px){
+
+  .form-modal{
+    align-items:flex-start;
+    justify-content:center;
+    padding:15px 10px;
+    overflow-y:auto;
+  }
+
+ .form-container{
+    max-width:380px;
+    padding:15px;
+    max-height:84vh;
+    margin-top: 60px;
+  }
+
+  .form-container h3{
+    font-size:18px;
+    margin-bottom:10px;
+    line-height:1.2;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea{
+    padding:9px;
+    font-size:14px;
+    margin-bottom:8px;
+    border-radius:6px;
+  }
+
+  .form-container textarea{
+    min-height:85px;
+  }
+
+  .submit-btn{
+    padding:10px;
+    font-size:14px;
+    border-radius:6px;
+  }
+
+  .close-btn{
+    top:8px;
+    right:10px;
+    font-size:20px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width:480px){
+
+  .form-modal{
+    padding:10px 8px;
+  }
+
+  .form-container{
+    padding:12px;
+  }
+
+  .form-container h3{
+    font-size:17px;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea{
+    padding:8px;
+    font-size:13px;
+  }
+
+  .form-container textarea{
+    min-height:75px;
+  }
+
+  .submit-btn{
+    padding:9px;
+    font-size:13px;
+  }
+}
 
 
 
