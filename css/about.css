@@ -836,11 +836,11 @@ select {
 
 /* Heading */
 .timeline-hero h1 {
-  font-size: 72px;
+  font-size: 70px;
   /* 🔥 bigger */
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 40px !important;
   display: block;
   margin-top: 10px;
   text-align: center;
@@ -1226,14 +1226,14 @@ and (min-height:900px) and (max-height:1000px){
 
     /* Heading */
     .timeline-heading{
-        margin-bottom:35px;
+        margin-bottom:30px;
         text-align:center;
     }
 
     .timeline-heading h2{
         font-size:54px;
         line-height:1.1;
-        margin-bottom:12px;
+       
     }
 
     .timeline-heading p{
@@ -1905,23 +1905,23 @@ and (min-height:900px) and (max-height:1000px){
 
 /* HEADING */
 .timeline-heading {
-  margin-bottom: 80px;
+  
 }
 
 .timeline-heading h2 {
-  font-size: 48px;
+  font-size: 48px !important;
   font-weight: 900;
   letter-spacing: 2px;
 
   background: linear-gradient(90deg, #ffffff, #bff747);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
 
 .timeline-heading p {
   color: rgba(255,255,255,0.7);
-  margin-top: 10px;
-
+  
 
 }
 

@@ -907,13 +907,13 @@ margin-top: 37px;
 
 
 .award-section h5{
-    font-size:14px;
+    font-size:25px;
     letter-spacing:2px;
     margin-bottom:8px;
 }
 
 .award-section .display-5{
-    font-size:34px;
+    font-size:42px;
     margin-bottom:28px !important;
     line-height:1.15;
 }
@@ -926,7 +926,7 @@ margin-top: 37px;
 
 
 .award-image-container img {
-    width: 200px;
+    width: 220px;
     height: auto;
     transition: transform 0.5s ease;
     margin-block: 15px;
@@ -978,7 +978,7 @@ margin-top: 37px;
 }
 
 .award-text h4{
-    font-size:22px;
+    font-size:26px;
     line-height:1.45;
     margin:0 0 3px;
     color:#fff;
@@ -1019,12 +1019,12 @@ margin-top: 37px;
 }
 
 .award-section h5{
-    font-size:13px;
+    font-size:19px;
     letter-spacing:1.5px;
 }
 
 .award-section .display-5{
-    font-size:30px;
+    font-size:37px;
     margin-bottom:24px !important;
 }
 
@@ -1071,12 +1071,12 @@ margin-top: 37px;
 }
 
 .award-section h5{
-    font-size:12px;
+    font-size:19px;
     letter-spacing:1px;
 }
 
 .award-section .display-5{
-    font-size:24px;
+    font-size:38px;
     margin-bottom:20px !important;
     line-height:1.25;
 }
@@ -1103,12 +1103,12 @@ margin-top: 37px;
 }
 
 .award-text h4{
-    font-size:15px;
+    font-size:36px;
     line-height:1.45;
 }
 
 .award-text .bywhom{
-    font-size:12px;
+    font-size:15px;
 }
 
 .awardBx:hover{
@@ -1129,7 +1129,7 @@ margin-top: 37px;
 }
 
 .award-section .display-5{
-    font-size:21px;
+    font-size:30px;
 }
 
 .award-image-container img{
@@ -1547,7 +1547,7 @@ footer .company-name {
 
 /* Left Title */
 .about-section .section-title h4{
-    font-size:30px;
+    font-size:38px !important;
     margin-bottom:18px !important;
     font-weight:600;
     color:#bff747;
@@ -1555,7 +1555,7 @@ footer .company-name {
 
 /* Work Box Text */
 .workspanBx h2{
-    font-size:25px;
+    font-size:32px;
     line-height:1.45;
     margin:0;
     font-weight:500;
@@ -1563,14 +1563,14 @@ footer .company-name {
 
 /* About Heading */
 .about-section .display-4{
-    font-size:30px;
+    font-size:38px;
     line-height:1.1;
     margin-bottom:14px !important;
 }
 
 /* Paragraph */
 .about-section p{
-    font-size:13px;
+    font-size:15px;
     line-height:1.7;
     color:#d7d7d7 !important;
     margin-bottom:14px !important;
@@ -1595,7 +1595,7 @@ footer .company-name {
 }
 
 .about-section .section-title h4{
-    font-size:26px;
+    font-size:28px;
 }
 
 .workspanBx h2{
@@ -1638,7 +1638,7 @@ footer .company-name {
 }
 
 .workspanBx h2{
-    font-size:17px;
+    font-size:24px;
     line-height:1.5;
 }
 
@@ -1677,7 +1677,7 @@ footer .company-name {
 }
 
 .workspanBx h2{
-    font-size:15px;
+    font-size:25px;
 }
 
 .about-section .display-4{
