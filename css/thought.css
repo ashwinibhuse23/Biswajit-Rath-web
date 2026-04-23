@@ -185,6 +185,7 @@ section {
   margin-bottom: 20px;
    animation-delay: 0.3s;
    letter-spacing: -1px;
+   margin-top: 80px;
 }
 
 .hero-subtext {
@@ -305,6 +306,7 @@ section {
   background: var(--dark-bg);
   padding: 80px 20px;
   position: relative;
+  margin-top: 80px;
 }
 
 /* subtle glow background */
@@ -377,6 +379,7 @@ section {
   width: 100%;
   height: 240px;
   object-fit: cover;
+  object-position: center;
    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -385,6 +388,19 @@ section {
   transform: scale(1.1) rotate(0.5deg);
 }
 
+/* 2nd image fix */
+.blog-section .col-lg-4:nth-child(2) .blog-img img{
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #000 !important;
+}
+
+/* 5th image fix */
+.blog-section .col-lg-4:nth-child(5) .blog-img img{
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #000 !important;
+}
 
 @keyframes glowPulse {
   0% { opacity: 0.4; transform: scale(1); }
@@ -536,6 +552,8 @@ position: relative;
     font-size: 40px;
      letter-spacing: -0.5px;
   }
+
+  
 }
 
 /* mobile */
